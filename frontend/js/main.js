@@ -7,6 +7,38 @@
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---------- Hero signature moment ----------
+     The petal contour draws itself in (real stroke length, measured at
+     runtime), then the credential badge settles into place a beat later.
+     This is the one authored entrance the world owns; everything below
+     the fold uses the calmer generic reveal instead. Both elements are
+     fully visible by default in CSS, so any failure here just means the
+     signature moment is skipped, never that content goes missing. */
+  try {
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const petalPath = document.querySelector(".petal-frame__outline path");
+    const badge = document.querySelector(".floating-badge");
+
+    if (petalPath && !reduceMotion) {
+      const length = petalPath.getTotalLength();
+      petalPath.style.strokeDasharray = String(length);
+      petalPath.style.strokeDashoffset = String(length);
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          petalPath.style.strokeDashoffset = "0";
+        });
+      });
+    }
+
+    if (badge) {
+      badge.classList.add("hero-pending");
+      const delay = reduceMotion ? 0 : 550;
+      setTimeout(() => badge.classList.add("is-visible"), delay);
+    }
+  } catch (err) {
+    /* Signature moment skipped; elements keep their visible-by-default state. */
+  }
+
   /* ---------- Header: glass shadow on scroll ---------- */
   const header = document.querySelector(".site-header");
   if (header) {
