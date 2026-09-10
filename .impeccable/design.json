@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-10T00:00:00Z",
+  "title": "Design System: Luana Amaral — Biomédica Esteta",
+  "extensions": {
+    "colorMeta": {
+      "rose-600": { "role": "primary", "displayName": "Soft Rose", "canonical": "#A8425F", "tonalRamp": ["#3D1420", "#5C2032", "#82304A", "#A8425F", "#C85D7E", "#DC839D", "#EBADC0", "#F5CFDB"] },
+      "rose-700": { "role": "primary", "displayName": "Rose Deep", "canonical": "#82304A", "tonalRamp": ["#2E0F17", "#4A2030", "#5C2032", "#82304A", "#A8425F", "#C85D7E", "#DC839D", "#F5CFDB"] },
+      "rose-100": { "role": "primary", "displayName": "Rose Pale", "canonical": "#FBE7ED", "tonalRamp": ["#82304A", "#A8425F", "#C85D7E", "#DC839D", "#EBADC0", "#F5CFDB", "#FBE7ED", "#FDF3F6"] },
+      "rose-400": { "role": "primary", "displayName": "Rose Mid", "canonical": "#DC839D", "tonalRamp": ["#5C2032", "#82304A", "#A8425F", "#C85D7E", "#DC839D", "#EBADC0", "#F5CFDB", "#FBE7ED"] },
+      "ink-900": { "role": "neutral", "displayName": "Ink 900", "canonical": "#241A20", "tonalRamp": ["#0F0A0D", "#241A20", "#3A2A31", "#4A3740", "#5F4A54", "#83707A", "#A79AA1", "#D8D0D4"] },
+      "ink-700": { "role": "neutral", "displayName": "Ink 700", "canonical": "#4A3740", "tonalRamp": ["#241A20", "#3A2A31", "#4A3740", "#5F4A54", "#73616A", "#83707A", "#A79AA1", "#D8D0D4"] },
+      "ink-500": { "role": "neutral", "displayName": "Ink 500", "canonical": "#83707A", "tonalRamp": ["#4A3740", "#5F4A54", "#73616A", "#83707A", "#9A8B92", "#B3A7AC", "#CCC3C7", "#E5E0E2"] },
+      "surface-bg": { "role": "neutral", "displayName": "Surface White", "canonical": "#FFFFFF", "tonalRamp": ["#E5E0E2", "#EDE9EB", "#F3F0F1", "#F8F6F7", "#FBFAFA", "#FDFCFD", "#FEFEFE", "#FFFFFF"] },
+      "surface-bg-tint": { "role": "neutral", "displayName": "Surface Tint", "canonical": "#FDF4F7", "tonalRamp": ["#F5CFDB", "#F9DFE7", "#FBE7ED", "#FCEDF1", "#FDF0F4", "#FDF3F6", "#FDF4F7", "#FEFAFB"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "#F1DDE4", "tonalRamp": ["#DC839D", "#EBADC0", "#F1DDE4", "#F5CFDB", "#F9DFE7", "#FBE7ED", "#FDF3F6", "#FEFAFB"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only (two lines, max-width 14ch)." },
+      "headline": { "displayName": "Headline", "purpose": "Every section h2, max-width 20ch." },
+      "lead": { "displayName": "Lead", "purpose": "Section intro paragraphs, max-width 62ch." },
+      "body": { "displayName": "Body", "purpose": "Running copy, FAQ answers, form text." },
+      "label": { "displayName": "Label", "purpose": "Brand title, procedure group titles, stat captions. Never used as a kicker above a heading." }
+    },
+    "shadows": [
+      { "name": "button-lift", "value": "0 14px 28px -14px rgba(168, 66, 95, 0.55)", "purpose": "Primary button at rest; deepens to rgba(130,48,74,0.6) on hover." },
+      { "name": "card-lift", "value": "0 30px 60px -30px rgba(74, 55, 64, 0.3)", "purpose": "Contact form card, the system's one large elevated surface." },
+      { "name": "badge-lift", "value": "0 24px 40px -18px rgba(74, 55, 64, 0.35)", "purpose": "Floating CRBM credential badge over the hero visual." },
+      { "name": "header-scrolled", "value": "0 12px 30px -20px rgba(74, 55, 64, 0.35)", "purpose": "Sticky header shadow, applied only once scrollY > 8px via .is-scrolled." },
+      { "name": "icon-chip-lift", "value": "0 8px 18px -10px rgba(74, 55, 64, 0.35)", "purpose": "Contact-info circular icon chips." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Default easing for all transitions in the system." },
+      { "name": "petal-draw-in", "value": "stroke-dashoffset 1.2s var(--ease-out), measured via getTotalLength() at runtime", "purpose": "Hero signature moment: the petal outline draws itself in on load." },
+      { "name": "badge-settle-delay", "value": "550ms setTimeout before .is-visible", "purpose": "Floating CRBM badge settles in after the petal outline draws, not simultaneously." },
+      { "name": "reveal-cascade-step", "value": "80-90ms nth-child transition-delay steps", "purpose": "Stepped per-item reveal for repeated-item sections (feature list, procedure lists, FAQ)." },
+      { "name": "reveal-fade", "value": "opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out) (translateY 24px to 0)", "purpose": "Generic scroll reveal for plain-prose sections." },
+      { "name": "reveal-safety-net", "value": "2500ms setTimeout force-reveal after window load", "purpose": "Guarantees any missed reveal target still becomes visible." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "960px" },
+      { "name": "sm", "value": "560px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call-to-action button (Agendar avaliação, form submit).",
+      "html": "<a href=\"#\" class=\"ds-btn-primary\">Agendar minha avaliação</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.9rem 1.6rem; border-radius: 999px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.95rem; background: #A8425F; color: #fff; box-shadow: 0 14px 28px -14px rgba(168, 66, 95, 0.55); transition: transform 0.25s cubic-bezier(0.16,1,0.3,1), box-shadow 0.25s cubic-bezier(0.16,1,0.3,1), background 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { background: #82304A; transform: translateY(-2px); box-shadow: 0 18px 32px -14px rgba(130, 48, 74, 0.6); } .ds-btn-primary:focus-visible { outline: 2px solid #A8425F; outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action button (Ver procedimentos, Falar no WhatsApp).",
+      "html": "<a href=\"#\" class=\"ds-btn-ghost\">Ver procedimentos</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.9rem 1.6rem; border-radius: 999px; font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 0.95rem; background: transparent; color: #241A20; border: 1.5px solid #F1DDE4; transition: border-color 0.2s cubic-bezier(0.16,1,0.3,1), background 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-ghost:hover { border-color: #DC839D; background: #FDF3F6; } .ds-btn-ghost:focus-visible { outline: 2px solid #A8425F; outline-offset: 3px; }"
+    },
+    {
+      "name": "Text Input",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Contact form field (name/email/phone/message).",
+      "html": "<div class=\"ds-form-row\"><label for=\"ds-name\">Nome</label><input id=\"ds-name\" type=\"text\"></div>",
+      "css": ".ds-form-row { display: flex; flex-direction: column; gap: 0.5rem; } .ds-form-row label { font-family: 'Manrope', sans-serif; font-size: 0.85rem; font-weight: 600; color: #241A20; } .ds-form-row input { font-family: 'Manrope', sans-serif; padding: 0.85rem 1rem; border-radius: 10px; border: 1.5px solid #F1DDE4; background: #FDF4F7; color: #241A20; transition: border-color 0.2s cubic-bezier(0.16,1,0.3,1), background 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-form-row input:focus { border-color: #C85D7E; background: #FFFFFF; outline: none; }"
+    },
+    {
+      "name": "Sticky Header",
+      "kind": "nav",
+      "refersTo": "site-header",
+      "description": "Glass header that gains an opaque background, border, and shadow once scrolled.",
+      "html": "<header class=\"ds-header\"><span class=\"ds-brand\">Luana Amaral</span><nav class=\"ds-nav\"><a href=\"#\">Sobre</a><a href=\"#\">Procedimentos</a><a href=\"#\">Contato</a></nav></header>",
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.5rem; background: rgba(255,255,255,0.72); backdrop-filter: blur(14px) saturate(160%); border-bottom: 1px solid transparent; transition: box-shadow 0.3s cubic-bezier(0.16,1,0.3,1), border-color 0.3s cubic-bezier(0.16,1,0.3,1), background 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-header.ds-scrolled { background: rgba(255,255,255,0.92); border-bottom-color: #F1DDE4; box-shadow: 0 12px 30px -20px rgba(74,55,64,0.35); } .ds-brand { font-family: 'Fraunces', serif; font-size: 1.35rem; color: #241A20; } .ds-nav { display: flex; gap: 2rem; } .ds-nav a { font-family: 'Manrope', sans-serif; font-size: 0.9375rem; font-weight: 500; color: #4A3740; position: relative; text-decoration: none; } .ds-nav a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: #C85D7E; transform: scaleX(0); transform-origin: right; transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-nav a:hover::after { transform: scaleX(1); transform-origin: left; }"
+    },
+    {
+      "name": "Feature List Item",
+      "kind": "custom",
+      "refersTo": "feature-list-item",
+      "description": "No-card list item pattern used for Diferenciais/Procedimentos/FAQ — hairline divider instead of card chrome, cascading reveal.",
+      "html": "<div class=\"ds-feature-item\"><span class=\"ds-feature-icon\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 3L20 6.5V11C20 15.5 16.9 19.7 12 21C7.1 19.7 4 15.5 4 11V6.5L12 3Z\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\"/></svg></span><div><h3>Registro profissional ativo</h3><p>Biomédica com CRBM ativo.</p></div></div>",
+      "css": ".ds-feature-item { display: flex; gap: 1.25rem; padding-top: 1.75rem; border-top: 1px solid #F1DDE4; } .ds-feature-icon { flex-shrink: 0; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; background: #FBE7ED; color: #A8425F; } .ds-feature-item h3 { font-family: 'Fraunces', serif; font-size: 1.125rem; color: #241A20; margin-bottom: 0.5rem; } .ds-feature-item p { font-family: 'Manrope', sans-serif; font-size: 0.95rem; color: #4A3740; margin: 0; }"
+    },
+    {
+      "name": "Petal Frame",
+      "kind": "custom",
+      "refersTo": "petal-frame",
+      "description": "Signature hero device: authored SVG clipPath organic frame with a self-drawing outline and a floating credential badge. Currently holds a placeholder line-art illustration.",
+      "html": "<div class=\"ds-petal-frame\"><svg width=\"0\" height=\"0\"><defs><clipPath id=\"dsPetalClip\" clipPathUnits=\"objectBoundingBox\"><path d=\"M0.5,0.02 C0.75,0.02 0.94,0.14 0.98,0.38 C1.03,0.62 0.95,0.82 0.78,0.93 C0.63,1.02 0.4,1.02 0.24,0.92 C0.06,0.81 -0.03,0.6 0.02,0.4 C0.07,0.19 0.26,0.02 0.5,0.02 Z\"/></clipPath></defs></svg><div class=\"ds-petal-media\"></div><div class=\"ds-floating-badge\"><strong>Biomédica Esteta</strong><small>CRBM 10922-5</small></div></div>",
+      "css": ".ds-petal-frame { position: relative; aspect-ratio: 5/6; max-width: 320px; } .ds-petal-media { width: 100%; height: 100%; clip-path: url(#dsPetalClip); background: #FBE7ED; } .ds-floating-badge { position: absolute; left: -1.25rem; bottom: 6%; display: flex; align-items: center; gap: 0.75rem; background: #FFFFFF; padding: 1rem 1.35rem; border-radius: 18px; box-shadow: 0 24px 40px -18px rgba(74,55,64,0.35); max-width: 230px; } .ds-floating-badge strong { display: block; font-family: 'Manrope', sans-serif; font-size: 0.875rem; color: #241A20; } .ds-floating-badge small { display: block; font-family: 'Manrope', sans-serif; font-size: 0.75rem; color: #83707A; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Credential-First Clinic",
+    "overview": "This is a single-accent, white-ground world built to put professional trust signals — CRBM registration, a decade of practice, a natural-result claim — ahead of decorative aesthetic-clinic imagery. The palette stays almost entirely white/near-white with one soft-rose accent carrying buttons, the headline's italic emphasis word, and the frame around the hero visual; nothing else competes with it for attention. Fraunces (serif, italicized for emphasis) supplies warmth and editorial credibility at display size, while Manrope carries every working sentence in a plain, legible sans. The system is calm and restrained rather than clinical-cold or spa-glossy: soft radii, rose-tinted diffuse shadows (never hard offset shadows, never gray), and a strict no-card-inside-card rule keep surfaces from stacking into visual noise.\n\nThe signature device is the petal-frame: an authored SVG clipPath built from hand-written cubic-bezier curves, not a circle, polygon, or radial-gradient standing in for organic shape. It is reserved for the hero's professional-photo slot; it is not a general-purpose container. The world explicitly rejects the generic \"spa/influencer\" hero built around glamour photography — the first viewport's real content is a credential stat bar (years of experience, active CRBM number, natural-result claim), not a beauty shot alone.",
+    "keyCharacteristics": [
+      "One accent (soft rose) on a white/near-white base; ink is always warm-tinted, never pure gray.",
+      "Fraunces italic carries emphasis inline within sans-serif body copy — not a separate display block.",
+      "Pill-shaped buttons, soft-to-large radii (10–32px), rose-tinted diffuse shadows only.",
+      "One authored organic motif (the petal clip-path); everything else is geometric/circular icon chrome.",
+      "No eyebrow/kicker labels above any section heading, anywhere."
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Rose is the only chromatic color in the system. It never gains a second competing hue (no blue links, no green success unrelated to it) — the one exception is the form's success-status text, which uses a muted green (#3f7d52) purely as a semantic status signal, never as a decorative color.", "section": "colors" },
+      { "name": "The Warm-Neutral Rule", "body": "Ink and neutral tones are always warm-tinted (mixed toward rose/brown), never pure gray. A pure #000/#666/#ccc gray anywhere in this system is a bug, not a variant.", "section": "colors" },
+      { "name": "The Single Emphasis Word Rule", "body": "Fraunces italic (em, rose-700) marks exactly one emphasized word or short phrase inline within a sans-serif sentence — it is a punctuation device, not a second heading style. It never wraps a full sentence or heading.", "section": "typography" },
+      { "name": "The No Card-in-Card Rule", "body": "A shadowed/bordered container never nests another shadowed/bordered container. The feature list, procedure lists, and FAQ items intentionally use flat top/bottom hairline dividers instead of card chrome for this reason.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do reserve the petal clipPath motif for the hero visual only; it is a signature, not a reusable card shape.",
+      "Do use the stepped per-item cascade (80–90ms nth-child transition-delay steps) for sections that repeat structurally identical items (feature lists, procedure lists, FAQ accordion items); use the single calm fade-up for plain-prose sections (Sobre, Depoimentos, Contato).",
+      "Do keep every reveal/animation state visible-by-default in CSS, with JavaScript only arming the hidden state immediately before it commits to animating (try/catch-wrapped, with a forced-reveal safety net) — a scripting failure must never permanently hide real content.",
+      "Do treat CRBM registration, years of experience, and the natural-result stat as first-viewport content, not footer-of-page trust badges.",
+      "Do reuse ink-900 as the footer background — this is the system's one deliberate departure from the white/near-white base, an intentional closing-anchor convention, not an invented color.",
+      "Do mark unconfirmed content (procedures list, WhatsApp number, consultation address, social links) with visible in-context placeholder language, and let an unconfirmed section (Depoimentos) render as an honest empty state rather than fabricated content."
+    ],
+    "donts": [
+      "Don't stack a shadowed or bordered container inside another shadowed or bordered container (the No Card-in-Card rule) — use hairline dividers between repeated items instead.",
+      "Don't add an eyebrow/kicker label above a section heading. Every heading in this build stands alone; this was applied even where the client's own reference layout showed one, and it is not open for a future surface to reintroduce.",
+      "Don't substitute a circle, polygon, or CSS radial-gradient for the petal frame's organic contour — the shape must stay an authored bezier path.",
+      "Don't introduce a second accent hue, a pure-gray neutral, or a hard-offset/neobrutalist shadow; the shadow vocabulary is exclusively soft and rose/ink-tinted.",
+      "Don't apply the hero's authored draw-in/settle motion moment to any other element — it is reserved for the hero visual; other sections use the generic reveal or cascade."
+    ]
+  }
+}
