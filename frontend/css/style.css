@@ -213,11 +213,9 @@ em {
 .brand { display: flex; flex-direction: column; line-height: 1.15; }
 .brand__name { font-family: var(--font-display); font-size: 1.3rem; color: var(--ink-900); }
 .brand__title {
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+  font-size: 0.8rem;
   color: var(--teal-700);
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 2px;
 }
 
@@ -289,9 +287,10 @@ em {
   align-items: center;
 }
 .hero__headline {
-  font-size: clamp(2.3rem, 4vw, 3.15rem);
-  line-height: 1.14;
-  max-width: 22ch;
+  font-size: clamp(2.45rem, 5vw, 4.1rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  max-width: 15ch;
   text-wrap: balance;
 }
 .hero__lead {
@@ -304,9 +303,10 @@ em {
 
 /* Credential row — a list of proofs, not a big-number stat bar */
 .trust-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: start;
+  gap: 1.25rem 2rem;
   margin-top: 2.75rem;
   padding-top: 1.9rem;
   border-top: 1px solid var(--line);
@@ -330,6 +330,7 @@ em {
 }
 .trust-row__item span {
   display: block;
+  white-space: nowrap;
   font-size: 0.8rem;
   color: var(--ink-500);
   margin-top: 1px;
@@ -374,7 +375,7 @@ em {
   border-radius: var(--r-md);
   border: 1px solid var(--line);
   box-shadow: var(--shadow-lg);
-  max-width: 240px;
+  max-width: 280px;
 }
 .portrait__badge-icon {
   flex-shrink: 0;
@@ -392,6 +393,15 @@ em {
 .section { padding-block: clamp(3.5rem, 8vw, 6rem); }
 .section--tint { background: var(--paper-deep); }
 .section--narrow .section__lead { max-width: 66ch; }
+
+/* ---------- Sobre — title and text side by side ---------- */
+.about {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(1.5rem, 5vw, 4.5rem);
+  align-items: start;
+}
+.about__text .section__lead:first-child { margin-top: 0.35rem; }
 
 /* ---------- Feature list (Diferenciais) — hairline, no card chrome ---------- */
 .feature-list {
@@ -435,11 +445,10 @@ em {
 }
 .procedures__group-title {
   font-family: var(--font-body);
-  font-size: 0.72rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 0;
   color: var(--teal-700);
-  font-weight: 700;
+  font-weight: 600;
   padding-bottom: 0.9rem;
   border-bottom: 1px solid var(--line-strong);
 }
@@ -599,8 +608,8 @@ em {
    Visible by default (no-JS / JS-failure safe). JS opts individual
    elements into the hidden-then-reveal treatment via .reveal-pending,
    only once it has committed to observing them. Every section below the
-   fold uses this one calm fade-up — the single authored moment is the
-   hero portrait wipe below, and nothing else. */
+   fold stays still — the single authored moment is the hero portrait
+   wipe below, and nothing else. */
 [data-reveal].reveal-pending {
   opacity: 0;
   transform: translateY(22px);
@@ -651,7 +660,7 @@ em {
 
   .hero__grid { grid-template-columns: 1fr; gap: 2rem; }
   .hero__visual { order: -1; max-width: 340px; margin-inline: auto; margin-bottom: 1.25rem; }
-  .trust-row { gap: 1.25rem 1.75rem; }
+  .about { grid-template-columns: 1fr; }
 
   .feature-list, .procedures, .contact-grid { grid-template-columns: 1fr; }
   .contact-form { order: 2; }
@@ -663,6 +672,7 @@ em {
   .hero { padding-block: 2.5rem 3.25rem; }
   .hero__actions { flex-direction: column; align-items: stretch; }
   .hero__actions .btn { width: 100%; }
+  .trust-row { grid-template-columns: 1fr; }
   .portrait::before { inset: 1rem -1rem -1rem 1rem; }
   .portrait__badge { left: 0.5rem; right: 0.5rem; max-width: none; }
 }

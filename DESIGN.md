@@ -120,7 +120,7 @@ The system explicitly rejects: the previous rose/serif "petal-frame" world (soft
 - Spectral serif for titles and one emphasis word; Hanken Grotesk for everything else.
 - Moderate radii (8–20px), never a pill; neutral warm shadows with real offset, never a halo.
 - At most one bordered/shadowed card inside a section; repeated items use hairline dividers.
-- One authored motion moment (the hero portrait wipe); everything else is one calm fade-up.
+- One authored motion moment (the hero portrait wipe); everything below the fold is still.
 
 ## Colors
 
@@ -163,16 +163,15 @@ A warm off-white ground with a single teal/jade accent family and warm-tinted (n
 **Character:** A calm, contemporary serif for titles and a single emphasized word, paired with a clean high-legibility grotesque for every working sentence, label, and control. The pairing reads as "registered premium clinic," not "med-spa flyer" and not "corporate healthcare." Headings are weight 500 with a slight negative tracking (`-0.015em`); the serif is never bolded past 600.
 
 ### Hierarchy
-- **Display** (Spectral 500, `clamp(2.3rem, 4vw, 3.15rem)`, line-height 1.14): the hero `h1` only. Capped at `max-width: 22ch` with `text-wrap: balance` to hold two lines.
+- **Display** (Spectral 500, `clamp(2.45rem, 5vw, 4.1rem)`, line-height 1.05, `-0.025em`): the hero `h1` only — the page's one bold element. Capped at `max-width: 15ch` with `text-wrap: balance`.
 - **Headline** (Spectral 500, `clamp(1.7rem, 3vw, 2.3rem)`, line-height 1.18): every section `h2` (`.section__title`), capped at `max-width: 24ch`.
 - **Title** (Spectral 400, 1.15rem, line-height ~1.3): procedure names in the two-column list. The only place Spectral appears at body scale.
 - **Body** (Hanken 400, 16px, line-height 1.6): running copy. Leads run larger — 1.125rem in the hero, 1.0625rem in sections — at `max-width` 46–66ch.
 - **Sans headings** (Hanken 600, ~1.05rem, letter-spacing 0): feature-list `h3` and the FAQ question. Deliberately sans, not serif, and explicitly de-tracked.
-- **Label** (Hanken 600–700, 0.68–0.72rem, letter-spacing 0.14–0.16em, uppercase): the brand role line under the logo and the procedure group titles ("Facial" / "Corporal"). Teal-700 text, set over or under a hairline rule.
-- **Emphasis** (Spectral 500 italic, teal-700): exactly one inline word or short phrase per headline.
+- **Label** (Hanken 500–600, 0.8–0.95rem, sentence case, no tracking): the brand role line under the logo and the procedure group titles ("Facial" / "Corporal"). Teal-700 text. No all-caps labels anywhere.
 
 ### Named Rules
-**The Single Emphasis Word Rule.** Spectral italic in teal-700 (`em`) marks exactly one word or short phrase inline within a heading — a punctuation device, not a second heading style. It never wraps a full sentence.
+**The Plain Headline Rule.** Headlines carry no inline accent: no italic or teal-colored word inside a heading. The hero `h1` does its work through size (up to ~4.1rem, line-height 1.05, `-0.025em`) and a concrete claim, not through a highlighted phrase.
 
 **The Sans-Heading Rule.** Repeating sub-heads (feature cards, FAQ questions) are Hanken 600, not Spectral. The serif is reserved for the page's structural titles, procedure names, and the brand wordmark. Do not "upgrade" a component heading to serif.
 
@@ -239,10 +238,10 @@ Radii scale with surface size and never reach a pill: `8px` (`--r-xs`, icon chip
 - **Mobile (≤960px):** nav and header CTA hide; a `.menu-toggle` hamburger (≥44px target, bars animate into an X) opens a full-width `.mobile-nav` panel with stacked links (1px `--line` dividers) and a `.btn--block` CTA. Esc closes it.
 
 ### Portrait with Credential Badge (signature component)
-The hero visual: `.portrait__media` is a 20px rounded rectangle (`aspect-ratio: 5 / 6`, `--shadow-md`) holding the professional photo, set over `.portrait::before` — a teal-100 wash offset down-right (`inset: 1.6rem -1.6rem -1.6rem 1.6rem`, 20px radius). A white `.portrait__badge` card (16px radius, 1px `--line`, `--shadow-lg`, `max-width: 240px`) overlaps the lower-left corner with a teal-100 shield-check icon chip and two lines: `Biomédica Esteta` / `CRBM 10922-5 · Ativo`. On mobile the badge spans full width (`left: 0.5rem; right: 0.5rem`) and the wash inset tightens.
+The hero visual: `.portrait__media` is a 20px rounded rectangle (`aspect-ratio: 5 / 6`, `--shadow-md`) holding the professional photo, set over `.portrait::before` — a teal-100 wash offset down-right (`inset: 1.6rem -1.6rem -1.6rem 1.6rem`, 20px radius). A white `.portrait__badge` card (16px radius, 1px `--line`, `--shadow-lg`, `max-width: 240px`) overlaps the lower-left corner with a teal-100 shield-check icon chip and two lines: `Biomédica Esteta` / `CRBM 10922-5, registro ativo`. On mobile the badge spans full width (`left: 0.5rem; right: 0.5rem`) and the wash inset tightens.
 
 ### Credential Row (signature component)
-`.trust-row` is the hero's proof strip: a check-icon list above a `--line` top border, each item a 30px teal-100 icon chip plus a strong line (ink-900, 600) over a muted line (ink-500, 0.8rem) — `CRBM 10922-5` / `+10 anos` / `100% naturais`. It is explicitly **not** a big-number stat bar; that template was refused.
+`.trust-row` is the hero's proof strip: a check-icon list above a `--line` top border, each item a 30px teal-100 icon chip plus a strong line (ink-900, 600) over a muted line (ink-500, 0.8rem) — `CRBM 10922-5` / `+10 anos` / `100% naturais`, laid out as a three-column grid (one column under 560px). It is explicitly **not** a big-number stat bar; that template was refused.
 
 ### FAQ Accordion
 Hairline-divided items (`--line` bottom border), no card. Question is a full-width `button`, Hanken 600, 1.05rem, ink-900, with a teal-600 chevron that rotates 180° when open. The answer animates open via `grid-template-rows: 0fr → 1fr` (0.3s). JS keeps one item open at a time.
@@ -258,7 +257,7 @@ Hairline-divided items (`--line` bottom border), no card. Question is a full-wid
 - **Do** treat CRBM registration, "+10 anos," and the natural-result claim as first-viewport content in a check-icon list.
 - **Do** render unconfirmed content (procedures, testimonials, contact details) as clearly-signalled placeholders; let the testimonials section stand as an honest dashed-border empty state rather than fabricate quotes.
 - **Do** keep every `[data-reveal]` state visible-by-default in CSS; JS only arms the pending state via IntersectionObserver, with a 2500ms safety net and a try/catch force-reveal.
-- **Do** confine authored motion to the hero portrait wipe (`clip-path: inset(0 0 100% 0)` → `inset(0 0 0 0)`, 0.9s `--ease-out`), with the teal wash sliding in from lower-left and the badge settling at +0.5s. Everything below the fold uses one calm fade-up (opacity + 22px translateY, 0.7s). `prefers-reduced-motion` neutralizes all of it.
+- **Do** confine authored motion to the hero portrait wipe (`clip-path: inset(0 0 100% 0)` → `inset(0 0 0 0)`, 0.9s `--ease-out`), with the teal wash sliding in from lower-left and the badge settling at +0.5s. Everything below the fold is static — no scroll fade-ups. `prefers-reduced-motion` neutralizes all of it.
 
 ### Don't:
 - **Don't** use a pill or near-pill radius (`≈999px`) on anything. Buttons are 10px. This is a permanent break from the superseded rose-boutique world.
@@ -268,4 +267,5 @@ Hairline-divided items (`--line` bottom border), no card. Question is a full-wid
 - **Don't** set a feature-card or FAQ heading in Spectral — repeating sub-heads are Hanken 600. Reserve the serif for section titles, procedure names, and the wordmark.
 - **Don't** add a kicker or eyebrow label above a section heading; every `h2` stands alone.
 - **Don't** rebuild the hero credential row as a three-giant-numbers stat bar — it is a check-icon proof list.
-- **Don't** spend a second authored motion moment anywhere else; below-the-fold content gets the one shared fade-up only.
+- **Don't** spend a second authored motion moment anywhere else, and don't add scroll fade-ups to sections.
+- **Don't** use all-caps tracked labels, middle-dot meta strings (`A · B`), or a `→` glyph appended to button text.
