@@ -1,50 +1,248 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-09T00:00:00Z",
+  "generatedAt": "2026-09-24T00:00:00Z",
   "title": "Design System: Luana Amaral — Biomédica Esteta",
   "extensions": {
     "colorMeta": {
-      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#FAF8F5", "tonalRamp": [ "#211F1B", "#38352F", "#524D45", "#6F695E", "#948D7F", "#BBB4A5", "#DDD7CB", "#FAF8F5" ] },
-      "paper-deep": { "role": "neutral", "displayName": "Paper Deep", "canonical": "#F2EEE7", "tonalRamp": [ "#211E19", "#37332C", "#514C42", "#6E685B", "#938B7B", "#BAB2A1", "#DCD5C6", "#F2EEE7" ] },
-      "surface": { "role": "neutral", "displayName": "Surface White", "canonical": "#FFFFFF", "tonalRamp": [ "#1E1E1E", "#343434", "#4F4F4F", "#6C6C6C", "#919191", "#B8B8B8", "#DBDBDB", "#FFFFFF" ] },
-      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "#E6E0D6", "tonalRamp": [ "#201E19", "#36332C", "#504B41", "#6D675A", "#928A79", "#B9B19F", "#D0C8B8", "#E6E0D6" ] },
-      "line-strong": { "role": "neutral", "displayName": "Hairline Strong", "canonical": "#D8D0C2", "tonalRamp": [ "#1F1D18", "#35322A", "#4E4A3F", "#6B6557", "#8F8775", "#B4AC98", "#C9C0AE", "#D8D0C2" ] },
-      "ink-900": { "role": "neutral", "displayName": "Warm Charcoal", "canonical": "#26231F", "tonalRamp": [ "#26231F", "#3B3732", "#565049", "#736C62", "#978F82", "#BDB5A6", "#DFD8CB", "#F7F4EE" ] },
-      "ink-700": { "role": "neutral", "displayName": "Ink Body", "canonical": "#413B35", "tonalRamp": [ "#221F1C", "#413B35", "#5A534A", "#766E62", "#9A9082", "#BFB6A6", "#E0D9CB", "#F7F4EE" ] },
-      "ink-500": { "role": "neutral", "displayName": "Ink Meta", "canonical": "#6B6259", "tonalRamp": [ "#241F1B", "#3B342E", "#544B42", "#6B6259", "#8F8579", "#B4AA9B", "#D8CEBE", "#F4EFE6" ] },
-      "teal-700": { "role": "primary", "displayName": "Teal Deep", "canonical": "#115E59", "tonalRamp": [ "#032B27", "#08453E", "#0B5D54", "#115E59", "#12A093", "#3EC9BA", "#8FE8DC", "#D2F0EC" ] },
-      "teal-600": { "role": "primary", "displayName": "Teal", "canonical": "#0F766E", "tonalRamp": [ "#032B27", "#08453E", "#0B5D54", "#0F766E", "#12A093", "#3EC9BA", "#8FE8DC", "#D2F0EC" ] },
-      "teal-500": { "role": "primary", "displayName": "Teal Mid", "canonical": "#14B8A6", "tonalRamp": [ "#032B27", "#08453E", "#0B5D54", "#0F766E", "#14B8A6", "#3EC9BA", "#8FE8DC", "#D2F0EC" ] },
-      "teal-400": { "role": "primary", "displayName": "Teal Muted", "canonical": "#38B2A3", "tonalRamp": [ "#04302C", "#08453E", "#0B5D54", "#0F766E", "#14B8A6", "#38B2A3", "#8FE8DC", "#D2F0EC" ] },
-      "teal-100": { "role": "primary", "displayName": "Teal Wash", "canonical": "#D2F0EC", "tonalRamp": [ "#04302C", "#08453E", "#0B5D54", "#0F766E", "#14B8A6", "#5EEAD4", "#A7F0E6", "#D2F0EC" ] },
-      "teal-50": { "role": "primary", "displayName": "Teal Tint", "canonical": "#ECF8F6", "tonalRamp": [ "#04302C", "#08453E", "#0B5D54", "#0F766E", "#14B8A6", "#5EEAD4", "#B9F1E8", "#ECF8F6" ] },
-      "ok": { "role": "tertiary", "displayName": "OK Green", "canonical": "#2F6B44", "tonalRamp": [ "#12261A", "#1B3C29", "#255238", "#2F6B44", "#3C8A58", "#5FB07C", "#93CBA7", "#D3E9DB" ] },
-      "err": { "role": "tertiary", "displayName": "Error Rust", "canonical": "#9C4221", "tonalRamp": [ "#2C130A", "#472011", "#652E18", "#833820", "#9C4221", "#C4633E", "#DA9A80", "#F1D9CC" ] }
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#FAF8F5",
+        "tonalRamp": [
+          "#211F1B",
+          "#38352F",
+          "#524D45",
+          "#6F695E",
+          "#948D7F",
+          "#BBB4A5",
+          "#DDD7CB",
+          "#FAF8F5"
+        ]
+      },
+      "paper-deep": {
+        "role": "neutral",
+        "displayName": "Paper Deep",
+        "canonical": "#F2EEE7",
+        "tonalRamp": [
+          "#211E19",
+          "#37332C",
+          "#514C42",
+          "#6E685B",
+          "#938B7B",
+          "#BAB2A1",
+          "#DCD5C6",
+          "#F2EEE7"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Surface White",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#1E1E1E",
+          "#343434",
+          "#4F4F4F",
+          "#6C6C6C",
+          "#919191",
+          "#B8B8B8",
+          "#DBDBDB",
+          "#FFFFFF"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#E6E0D6",
+        "tonalRamp": [
+          "#201E19",
+          "#36332C",
+          "#504B41",
+          "#6D675A",
+          "#928A79",
+          "#B9B19F",
+          "#D0C8B8",
+          "#E6E0D6"
+        ]
+      },
+      "line-strong": {
+        "role": "neutral",
+        "displayName": "Hairline Strong",
+        "canonical": "#D8D0C2",
+        "tonalRamp": [
+          "#1F1D18",
+          "#35322A",
+          "#4E4A3F",
+          "#6B6557",
+          "#8F8775",
+          "#B4AC98",
+          "#C9C0AE",
+          "#D8D0C2"
+        ]
+      },
+      "ink-900": {
+        "role": "neutral",
+        "displayName": "Warm Charcoal",
+        "canonical": "#26231F",
+        "tonalRamp": [
+          "#26231F",
+          "#3B3732",
+          "#565049",
+          "#736C62",
+          "#978F82",
+          "#BDB5A6",
+          "#DFD8CB",
+          "#F7F4EE"
+        ]
+      },
+      "ink-700": {
+        "role": "neutral",
+        "displayName": "Ink Body",
+        "canonical": "#413B35",
+        "tonalRamp": [
+          "#221F1C",
+          "#413B35",
+          "#5A534A",
+          "#766E62",
+          "#9A9082",
+          "#BFB6A6",
+          "#E0D9CB",
+          "#F7F4EE"
+        ]
+      },
+      "ink-500": {
+        "role": "neutral",
+        "displayName": "Ink Meta",
+        "canonical": "#6B6259",
+        "tonalRamp": [
+          "#241F1B",
+          "#3B342E",
+          "#544B42",
+          "#6B6259",
+          "#8F8579",
+          "#B4AA9B",
+          "#D8CEBE",
+          "#F4EFE6"
+        ]
+      },
+      "teal-700": {
+        "role": "primary",
+        "displayName": "Teal Deep",
+        "canonical": "#115E59",
+        "tonalRamp": [
+          "#032B27",
+          "#08453E",
+          "#0B5D54",
+          "#115E59",
+          "#12A093",
+          "#3EC9BA",
+          "#8FE8DC",
+          "#D2F0EC"
+        ]
+      },
+      "teal-600": {
+        "role": "primary",
+        "displayName": "Teal",
+        "canonical": "#0F766E",
+        "tonalRamp": [
+          "#032B27",
+          "#08453E",
+          "#0B5D54",
+          "#0F766E",
+          "#12A093",
+          "#3EC9BA",
+          "#8FE8DC",
+          "#D2F0EC"
+        ]
+      },
+      "teal-500": {
+        "role": "primary",
+        "displayName": "Teal Mid",
+        "canonical": "#14B8A6",
+        "tonalRamp": [
+          "#032B27",
+          "#08453E",
+          "#0B5D54",
+          "#0F766E",
+          "#14B8A6",
+          "#3EC9BA",
+          "#8FE8DC",
+          "#D2F0EC"
+        ]
+      },
+      "teal-400": {
+        "role": "primary",
+        "displayName": "Teal Muted",
+        "canonical": "#38B2A3",
+        "tonalRamp": [
+          "#04302C",
+          "#08453E",
+          "#0B5D54",
+          "#0F766E",
+          "#14B8A6",
+          "#38B2A3",
+          "#8FE8DC",
+          "#D2F0EC"
+        ]
+      },
+      "teal-100": {
+        "role": "primary",
+        "displayName": "Teal Wash",
+        "canonical": "#D2F0EC",
+        "tonalRamp": [
+          "#04302C",
+          "#08453E",
+          "#0B5D54",
+          "#0F766E",
+          "#14B8A6",
+          "#5EEAD4",
+          "#A7F0E6",
+          "#D2F0EC"
+        ]
+      },
+      "teal-50": {
+        "role": "primary",
+        "displayName": "Teal Tint",
+        "canonical": "#ECF8F6",
+        "tonalRamp": [
+          "#04302C",
+          "#08453E",
+          "#0B5D54",
+          "#0F766E",
+          "#14B8A6",
+          "#5EEAD4",
+          "#B9F1E8",
+          "#ECF8F6"
+        ]
+      }
     },
     "typographyMeta": {
       "display": {
         "displayName": "Display",
-        "purpose": "Hero h1 only; Spectral serif, two lines, balanced, max 22ch."
+        "purpose": "Hero h1 only; Spectral 500, balanced, max 15ch."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Every section h2 (.section__title); Spectral serif, max 24ch."
+        "purpose": "Every section h2 (.section__title); Spectral 500, max 24ch, text-wrap: balance."
+      },
+      "group-title": {
+        "displayName": "Group Title",
+        "purpose": "Procedure group h3s (Facial / Corporal); Spectral 400 in teal-700, sentence case, left column of each group."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Procedure names in the two-column list; the only body-scale Spectral."
+        "purpose": "Procedure names in the name | description rows; Spectral 400 ink-900."
+      },
+      "subhead": {
+        "displayName": "Subhead",
+        "purpose": "Diferenciais h3s and FAQ questions; Hanken 600, deliberately sans and de-tracked."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Running copy in Hanken Grotesk; leads run 1.0625–1.125rem at 46–66ch."
+        "purpose": "Running copy in Hanken Grotesk; leads run 1.0625–1.125rem at 46–60ch."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Uppercase tracked Hanken; logo role line and procedure group titles only. Never a kicker above a section heading."
-      },
-      "emphasis": {
-        "displayName": "Emphasis",
-        "purpose": "Spectral 500 italic in teal-700; exactly one inline word per headline."
+        "purpose": "Sentence-case Hanken labels: contact-detail dt, brand role line, hero location line. Never uppercase, never a kicker above a section heading."
       }
     },
     "shadows": [
@@ -56,7 +254,7 @@
       {
         "name": "shadow-md",
         "value": "0 2px 4px rgba(38,35,31,0.05), 0 18px 36px -14px rgba(38,35,31,0.16)",
-        "purpose": "Portrait media frame; contact form card; primary button hover."
+        "purpose": "Portrait media frame; contact map card; primary button hover."
       },
       {
         "name": "shadow-lg",
@@ -64,9 +262,9 @@
         "purpose": "White CRBM credential badge over the portrait — the most-lifted element."
       },
       {
-        "name": "focus-ring-input",
-        "value": "0 0 0 3px rgba(15,118,110,0.30)",
-        "purpose": "Input focus ring (teal-600 at 30%); replaces the outline."
+        "name": "glass",
+        "value": "background: rgba(250,248,245,0.82–0.96); backdrop-filter: blur(10px)",
+        "purpose": "Sticky header (0.82 at rest, 0.96 scrolled) and mobile booking bar (0.92); glass instead of shadow."
       }
     ],
     "motion": [
@@ -76,14 +274,19 @@
         "purpose": "The system's single easing curve for every transition and the signature."
       },
       {
-        "name": "reveal-fade-up",
-        "value": "opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out); from { opacity: 0; transform: translateY(22px); }",
-        "purpose": "The one calm entrance for every [data-reveal] element below the fold."
-      },
-      {
         "name": "signature-portrait-wipe",
         "value": "clip-path 0.9s var(--ease-out); inset(0 0 100% 0) -> inset(0 0 0 0)",
-        "purpose": "Authored hero moment: portrait wipes up, teal wash slides in from lower-left, badge settles at +0.5s. The only authored motion."
+        "purpose": "Authored hero moment: portrait wipes up, teal wash slides in from lower-left, badge settles at +0.5s. The only authored motion; everything below the fold is still."
+      },
+      {
+        "name": "disclosure",
+        "value": "grid-template-rows 0.3s var(--ease-out); visibility delayed 0.3s on close",
+        "purpose": "FAQ answer open/close; closed answers are visibility: hidden."
+      },
+      {
+        "name": "booking-bar-slide",
+        "value": "transform 0.35s var(--ease-out); translateY(110%) -> 0",
+        "purpose": "Mobile booking bar entering once the hero CTA has scrolled above the viewport; a state transition, not an authored moment."
       }
     ],
     "breakpoints": [
@@ -95,40 +298,38 @@
         "name": "phone",
         "value": "560px"
       }
-    ]
+    ],
+    "layout": {
+      "split": "grid-template-columns: minmax(0,0.8fr) minmax(0,1.2fr); gap: clamp(1.5rem,5vw,5rem); sticky title top: 7rem",
+      "hero": "1.08fr / 0.92fr",
+      "contact": "0.85fr / 1.15fr",
+      "sectionScrollMargin": "4.5rem"
+    }
   },
   "components": [
     {
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "The main call to action (agendar avaliação); solid teal on any ground.",
-      "html": "<button class=\"ds-btn-primary\">Agendar minha avaliação<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3.5 8H12.5M12.5 8L8.5 4M12.5 8L8.5 12\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
-      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.5rem; border-radius: 10px; background: var(--teal-600, #0F766E); color: #fff; font-family: \"Hanken Grotesk\", -apple-system, sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.005em; white-space: nowrap; border: none; cursor: pointer; box-shadow: 0 1px 2px rgba(38,35,31,0.06), 0 3px 8px rgba(38,35,31,0.05); transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s cubic-bezier(0.16,1,0.3,1), background 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { background: var(--teal-700, #115E59); transform: translateY(-1px); box-shadow: 0 2px 4px rgba(38,35,31,0.05), 0 18px 36px -14px rgba(38,35,31,0.16); } .ds-btn-primary:focus-visible { outline: 2px solid var(--teal-600, #0F766E); outline-offset: 2px; border-radius: 10px; }"
+      "description": "The one call to action: every primary button opens the same prefilled WhatsApp conversation. Solid teal, leading WhatsApp icon; .btn--lg (1rem 1.6rem, min-height 52px) in the hero and contact section.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M20 11.5C20 15.9 16.4 19.5 12 19.5C10.6 19.5 9.3 19.1 8.1 18.5L4 19.5L5.1 15.7C4.4 14.5 4 13 4 11.5C4 7.1 7.6 3.5 12 3.5C16.4 3.5 20 7.1 20 11.5Z\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/></svg>Agendar pelo WhatsApp</a>",
+      "css": ".ds-btn-primary { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.5rem; border-radius: 10px; background: var(--teal-600, #0F766E); color: #fff; font-family: \"Hanken Grotesk\", -apple-system, sans-serif; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.005em; white-space: nowrap; border: none; cursor: pointer; box-shadow: 0 1px 2px rgba(38,35,31,0.06), 0 3px 8px rgba(38,35,31,0.05); transition: transform 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s cubic-bezier(0.16,1,0.3,1), background 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-primary:hover { background: var(--teal-700, #115E59); transform: translateY(-1px); box-shadow: 0 2px 4px rgba(38,35,31,0.05), 0 18px 36px -14px rgba(38,35,31,0.16); } .ds-btn-primary:focus-visible { outline: 2px solid var(--teal-600, #0F766E); outline-offset: 2px; border-radius: 10px; }"
     },
     {
       "name": "Ghost Button",
       "kind": "button",
       "refersTo": "button-ghost",
-      "description": "Secondary action (ver procedimentos, falar no WhatsApp); outlined, fills teal on hover.",
-      "html": "<button class=\"ds-btn-ghost\">Ver procedimentos</button>",
-      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.5rem; border-radius: 10px; background: transparent; color: var(--ink-900, #26231F); font-family: \"Hanken Grotesk\", -apple-system, sans-serif; font-weight: 600; font-size: 0.95rem; border: 1px solid var(--line-strong, #D8D0C2); cursor: pointer; transition: background 0.2s cubic-bezier(0.16,1,0.3,1), border-color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-ghost:hover { border-color: var(--teal-400, #38B2A3); background: var(--teal-50, #ECF8F6); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--teal-600, #0F766E); outline-offset: 2px; }"
+      "description": "Secondary in-page action (ver procedimentos); outlined, fills teal-50 on hover.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Ver procedimentos</a>",
+      "css": ".ds-btn-ghost { text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.5rem; border-radius: 10px; background: transparent; color: var(--ink-900, #26231F); font-family: \"Hanken Grotesk\", -apple-system, sans-serif; font-weight: 600; font-size: 0.95rem; border: 1px solid var(--line-strong, #D8D0C2); cursor: pointer; transition: background 0.2s cubic-bezier(0.16,1,0.3,1), border-color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-btn-ghost:hover { border-color: var(--teal-400, #38B2A3); background: var(--teal-50, #ECF8F6); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--teal-600, #0F766E); outline-offset: 2px; }"
     },
     {
-      "name": "Teal Icon Chip",
+      "name": "Check Chip",
       "kind": "custom",
       "refersTo": "icon-chip",
-      "description": "Rounded-square holder for an inline SVG glyph; used across credential row, feature list, empty state.",
-      "html": "<span class=\"ds-icon-chip\"><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 3L20 6.5V11C20 15.5 16.9 19.7 12 21C7.1 19.7 4 15.5 4 11V6.5L12 3Z\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linejoin=\"round\"/><path d=\"M9 12L11 14L15.5 9.5\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span>",
-      "css": ".ds-icon-chip { display: grid; place-items: center; width: 44px; height: 44px; flex-shrink: 0; border-radius: 8px; background: var(--teal-100, #D2F0EC); color: var(--teal-700, #115E59); }"
-    },
-    {
-      "name": "Text Input",
-      "kind": "input",
-      "refersTo": "input-field",
-      "description": "Contact form field; white on tint, hairline border, teal focus ring replaces the outline.",
-      "html": "<div class=\"ds-form-row\"><label for=\"ds-name\">Nome</label><input id=\"ds-name\" type=\"text\" /><span class=\"ds-form-error\">Informe seu nome completo.</span></div>",
-      "css": ".ds-form-row { display: flex; flex-direction: column; gap: 0.45rem; font-family: \"Hanken Grotesk\", -apple-system, sans-serif; } .ds-form-row label { font-size: 0.85rem; font-weight: 600; color: var(--ink-900, #26231F); } .ds-form-row input { font: inherit; padding: 0.8rem 0.95rem; border-radius: 10px; border: 1px solid var(--line-strong, #D8D0C2); background: var(--surface, #fff); color: var(--ink-900, #26231F); caret-color: var(--teal-600, #0F766E); transition: border-color 0.2s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-form-row input::placeholder { color: var(--ink-500, #6B6259); } .ds-form-row input:focus { border-color: var(--teal-700, #115E59); box-shadow: 0 0 0 3px rgba(15,118,110,0.30); outline: none; } .ds-form-error { font-size: 0.8rem; color: var(--err, #9C4221); min-height: 1.1em; }"
+      "description": "30px rounded-square teal-100 chip with a teal-700 check; hero credential row only (38px shield variant in the badge). Never used in lists below the hero.",
+      "html": "<span class=\"ds-icon-chip\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M5 12.5l4.5 4.5L19 7\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span>",
+      "css": ".ds-icon-chip { display: grid; place-items: center; width: 30px; height: 30px; flex-shrink: 0; border-radius: 8px; background: var(--teal-100, #D2F0EC); color: var(--teal-700, #115E59); }"
     },
     {
       "name": "Sticky Header Nav",
@@ -136,40 +337,88 @@
       "refersTo": null,
       "description": "Glass sticky header; hairline + shadow appear only once scrolled. Link hover wipes a teal underline in from the left.",
       "html": "<header class=\"ds-header\"><a class=\"ds-brand\"><span class=\"ds-brand-name\">Luana Amaral</span><span class=\"ds-brand-title\">Biomédica Esteta</span></a><nav class=\"ds-nav\"><a href=\"#\">Sobre</a><a href=\"#\">Procedimentos</a><a href=\"#\">Contato</a></nav></header>",
-      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1rem 1.5rem; background: rgba(250,248,245,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line, #E6E0D6); box-shadow: 0 1px 2px rgba(38,35,31,0.06), 0 3px 8px rgba(38,35,31,0.05); } .ds-brand { display: flex; flex-direction: column; line-height: 1.15; } .ds-brand-name { font-family: \"Spectral\", Georgia, serif; font-size: 1.3rem; color: var(--ink-900, #26231F); } .ds-brand-title { margin-top: 2px; font-family: \"Hanken Grotesk\", -apple-system, sans-serif; font-size: 0.68rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-700, #115E59); } .ds-nav { display: flex; gap: 1.85rem; } .ds-nav a { position: relative; padding-block: 0.25rem; font-family: \"Hanken Grotesk\", -apple-system, sans-serif; font-size: 0.925rem; font-weight: 500; color: var(--ink-700, #413B35); text-decoration: none; transition: color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-nav a::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--teal-600, #0F766E); transform: scaleX(0); transform-origin: right; transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-nav a:hover { color: var(--ink-900, #26231F); } .ds-nav a:hover::after { transform: scaleX(1); transform-origin: left; }"
+      "css": ".ds-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1rem 1.5rem; background: rgba(250,248,245,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--line, #E6E0D6); box-shadow: 0 1px 2px rgba(38,35,31,0.06), 0 3px 8px rgba(38,35,31,0.05); } .ds-brand { display: flex; flex-direction: column; line-height: 1.15; } .ds-brand-name { font-family: \"Spectral\", Georgia, serif; font-size: 1.3rem; color: var(--ink-900, #26231F); } .ds-brand-title { margin-top: 2px; font-family: \"Hanken Grotesk\", -apple-system, sans-serif; font-size: 0.8rem; font-weight: 500; color: var(--teal-700, #115E59); } .ds-nav { display: flex; gap: 1.85rem; } .ds-nav a { position: relative; padding-block: 0.25rem; font-family: \"Hanken Grotesk\", -apple-system, sans-serif; font-size: 0.925rem; font-weight: 500; color: var(--ink-700, #413B35); text-decoration: none; transition: color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-nav a::after { content: \"\"; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--teal-600, #0F766E); transform: scaleX(0); transform-origin: right; transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-nav a:hover { color: var(--ink-900, #26231F); } .ds-nav a:hover::after { transform: scaleX(1); transform-origin: left; }"
     },
     {
       "name": "Portrait Credential Badge",
       "kind": "card",
       "refersTo": "portrait-badge",
       "description": "White card overlapping the lower-left of the hero portrait; the system's most-lifted element.",
-      "html": "<div class=\"ds-badge\"><span class=\"ds-badge-icon\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 3L20 6.5V11C20 15.5 16.9 19.7 12 21C7.1 19.7 4 15.5 4 11V6.5L12 3Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M9 12L11 14L15.5 9.5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span><span><strong>Biomédica Esteta</strong><small>CRBM 10922-5 · Ativo</small></span></div>",
-      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 0.75rem; max-width: 240px; padding: 0.9rem 1.25rem; background: var(--surface, #fff); border: 1px solid var(--line, #E6E0D6); border-radius: 16px; box-shadow: 0 4px 10px rgba(38,35,31,0.07), 0 34px 64px -26px rgba(38,35,31,0.20); font-family: \"Hanken Grotesk\", -apple-system, sans-serif; } .ds-badge-icon { display: grid; place-items: center; width: 38px; height: 38px; flex-shrink: 0; border-radius: 8px; background: var(--teal-100, #D2F0EC); color: var(--teal-700, #115E59); } .ds-badge strong { display: block; font-size: 0.875rem; color: var(--ink-900, #26231F); } .ds-badge small { display: block; margin-top: 2px; font-size: 0.75rem; color: var(--ink-500, #6B6259); }"
+      "html": "<div class=\"ds-badge\"><span class=\"ds-badge-icon\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M12 3L20 6.5V11C20 15.5 16.9 19.7 12 21C7.1 19.7 4 15.5 4 11V6.5L12 3Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linejoin=\"round\"/><path d=\"M9 12L11 14L15.5 9.5\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span><span><strong>Biomédica Esteta</strong><small>CRBM 10922-5, registro ativo</small></span></div>",
+      "css": ".ds-badge { display: inline-flex; align-items: center; gap: 0.75rem; max-width: 280px; padding: 0.9rem 1.25rem; background: var(--surface, #fff); border: 1px solid var(--line, #E6E0D6); border-radius: 16px; box-shadow: 0 4px 10px rgba(38,35,31,0.07), 0 34px 64px -26px rgba(38,35,31,0.20); font-family: \"Hanken Grotesk\", -apple-system, sans-serif; } .ds-badge-icon { display: grid; place-items: center; width: 38px; height: 38px; flex-shrink: 0; border-radius: 8px; background: var(--teal-100, #D2F0EC); color: var(--teal-700, #115E59); } .ds-badge strong { display: block; font-size: 0.875rem; color: var(--ink-900, #26231F); } .ds-badge small { display: block; margin-top: 2px; font-size: 0.75rem; color: var(--ink-500, #6B6259); }"
     },
     {
       "name": "FAQ Accordion Item",
       "kind": "custom",
       "refersTo": null,
-      "description": "Hairline-divided disclosure; sans question, teal chevron rotates, answer opens via grid-template-rows.",
-      "html": "<div class=\"ds-faq is-open\"><button class=\"ds-faq-q\" aria-expanded=\"true\">Os procedimentos doem?<svg class=\"ds-faq-chevron\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button><div class=\"ds-faq-a\"><p>O desconforto varia por técnica e sensibilidade individual.</p></div></div>",
-      "css": ".ds-faq { border-bottom: 1px solid var(--line, #E6E0D6); font-family: \"Hanken Grotesk\", -apple-system, sans-serif; } .ds-faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.4rem; text-align: left; font-weight: 600; font-size: 1.05rem; color: var(--ink-900, #26231F); background: none; border: none; cursor: pointer; } .ds-faq-chevron { flex-shrink: 0; color: var(--teal-600, #0F766E); transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-faq-q[aria-expanded=\"true\"] .ds-faq-chevron { transform: rotate(180deg); } .ds-faq-a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-faq-a > p { overflow: hidden; min-height: 0; margin: 0; font-size: 0.975rem; color: var(--ink-700, #413B35); max-width: 62ch; } .ds-faq.is-open .ds-faq-a { grid-template-rows: 1fr; } .ds-faq.is-open .ds-faq-a > p { padding-bottom: 1.4rem; }"
+      "description": "Hairline-divided disclosure with aria-controls; sans question, teal chevron rotates, answer opens via grid-template-rows and is visibility: hidden when closed.",
+      "html": "<div class=\"ds-faq is-open\"><button class=\"ds-faq-q\" aria-expanded=\"true\" aria-controls=\"ds-faq-1\">Os procedimentos doem?<svg class=\"ds-faq-chevron\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 9l6 6 6-6\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button><div class=\"ds-faq-a\" id=\"ds-faq-1\"><p>O desconforto varia por técnica e sensibilidade individual.</p></div></div>",
+      "css": ".ds-faq { border-bottom: 1px solid var(--line-strong, #D8D0C2); font-family: \"Hanken Grotesk\", -apple-system, sans-serif; } .ds-faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.4rem; text-align: left; font-weight: 600; font-size: 1.05rem; color: var(--ink-900, #26231F); background: none; border: none; cursor: pointer; } .ds-faq-chevron { flex-shrink: 0; color: var(--teal-600, #0F766E); transition: transform 0.3s cubic-bezier(0.16,1,0.3,1); } .ds-faq-q[aria-expanded=\"true\"] .ds-faq-chevron { transform: rotate(180deg); } .ds-faq-a { display: grid; grid-template-rows: 0fr; visibility: hidden; transition: grid-template-rows 0.3s cubic-bezier(0.16,1,0.3,1), visibility 0s linear 0.3s; } .ds-faq-a > p { overflow: hidden; min-height: 0; margin: 0; font-size: 0.975rem; color: var(--ink-700, #413B35); max-width: 62ch; } .ds-faq.is-open .ds-faq-a { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows 0.3s cubic-bezier(0.16,1,0.3,1), visibility 0s; } .ds-faq-q:hover { color: var(--teal-700, #115E59); } .ds-faq.is-open .ds-faq-a > p { padding-bottom: 1.4rem; }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "text-link",
+      "description": "Quiet outbound link beside the WhatsApp CTA (e.g. route in Google Maps); teal-700 with a teal-400 underline that darkens on hover.",
+      "html": "<a class=\"ds-text-link\" href=\"#\">Abrir rota no Google Maps</a>",
+      "css": ".ds-text-link { display: inline-block; font-family: \"Hanken Grotesk\", -apple-system, sans-serif; font-size: 0.925rem; font-weight: 600; color: var(--teal-700, #115E59); text-decoration: underline; text-decoration-color: var(--teal-400, #38B2A3); text-underline-offset: 0.25em; text-decoration-thickness: 1px; transition: text-decoration-color 0.2s cubic-bezier(0.16,1,0.3,1); } .ds-text-link:hover { text-decoration-color: var(--teal-700, #115E59); }"
+    },
+    {
+      "name": "Hairline Feature Row",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Diferenciais list: --line-strong rules, Hanken 600 h3 left, description right, no chips or cards.",
+      "html": "<ul class=\"ds-features\"><li><h3>Registro profissional ativo</h3><p>Biomédica com CRBM 10922-5 ativo: cuidado dentro das normas do conselho de classe.</p></li><li><h3>Mais de 10 anos de prática</h3><p>Uma década aprimorando técnica em harmonização facial e corporal.</p></li></ul>",
+      "css": ".ds-features { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line-strong, #D8D0C2); font-family: \"Hanken Grotesk\", -apple-system, sans-serif; } .ds-features li { display: grid; grid-template-columns: minmax(0,0.9fr) minmax(0,1.1fr); gap: 0.5rem 2rem; padding-block: 1.6rem; border-bottom: 1px solid var(--line-strong, #D8D0C2); } .ds-features h3 { margin: 0; font-weight: 600; font-size: 1.05rem; line-height: 1.4; color: var(--ink-900, #26231F); } .ds-features p { margin: 0; font-size: 0.975rem; line-height: 1.6; color: var(--ink-700, #413B35); }"
+    },
+    {
+      "name": "Procedure Group",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Ink-900 top rule, Spectral teal-700 group title left, name | description rows right divided by --line.",
+      "html": "<div class=\"ds-proc\"><div class=\"ds-proc-group\"><h3>Facial</h3><ul><li><span>Harmonização facial</span><p>Planejamento individual para equilíbrio e proporção do rosto.</p></li><li><span>Preenchimento labial</span><p>Volume e contorno natural, respeitando a anatomia dos lábios.</p></li></ul></div></div>",
+      "css": ".ds-proc { border-top: 1px solid var(--ink-900, #26231F); font-family: \"Hanken Grotesk\", -apple-system, sans-serif; } .ds-proc-group { display: grid; grid-template-columns: minmax(0,0.8fr) minmax(0,1.2fr); gap: 0.75rem clamp(1.5rem,5vw,5rem); padding-block: clamp(1.5rem,3vw,2.25rem); } .ds-proc-group h3 { margin: 0; font-family: \"Spectral\", Georgia, serif; font-size: clamp(1.5rem,2.4vw,1.9rem); font-weight: 400; line-height: 1.2; color: var(--teal-700, #115E59); } .ds-proc-group ul { list-style: none; margin: 0; padding: 0; } .ds-proc-group li { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.25fr); gap: 0.25rem 2rem; align-items: baseline; padding-block: 1.1rem; border-bottom: 1px solid var(--line, #E6E0D6); } .ds-proc-group li:first-child { padding-top: 0.35rem; } .ds-proc-group li:last-child { border-bottom: 0; padding-bottom: 0; } .ds-proc-group span { font-family: \"Spectral\", Georgia, serif; font-size: 1.25rem; line-height: 1.3; color: var(--ink-900, #26231F); } .ds-proc-group p { margin: 0; font-size: 0.925rem; color: var(--ink-500, #6B6259); }"
+    },
+    {
+      "name": "Contact Details",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "dl rows under the contact CTA: --line-strong top rule, 7.5rem label column, --line row dividers.",
+      "html": "<dl class=\"ds-details\"><div><dt>WhatsApp</dt><dd><a href=\"#\">(51) 9849-3543</a></dd></div><div><dt>Endereço</dt><dd>Rua João Pessoa, 1018, Centro<br>Montenegro, RS</dd></div></dl>",
+      "css": ".ds-details { margin: 0; border-top: 1px solid var(--line-strong, #D8D0C2); font-family: \"Hanken Grotesk\", -apple-system, sans-serif; } .ds-details > div { display: grid; grid-template-columns: 7.5rem minmax(0,1fr); gap: 0.25rem 1rem; padding-block: 1.15rem; border-bottom: 1px solid var(--line, #E6E0D6); } .ds-details dt { font-size: 0.875rem; font-weight: 600; color: var(--ink-500, #6B6259); } .ds-details dd { margin: 0; color: var(--ink-900, #26231F); } .ds-details dd > a { font-weight: 600; color: inherit; text-decoration: none; } .ds-details dd > a:hover { color: var(--teal-700, #115E59); }"
+    },
+    {
+      "name": "Map Card",
+      "kind": "card",
+      "refersTo": "map-card",
+      "description": "The contact section's only card: 20px radius, hairline border, shadow-md, teal-50 ground with an aria-hidden address fallback under a slightly desaturated Google Maps iframe.",
+      "html": "<div class=\"ds-map\"><div class=\"ds-map-fallback\" aria-hidden=\"true\"><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\"><path d=\"M19 10c0 5.2-7 11-7 11s-7-5.8-7-11a7 7 0 0 1 14 0Z\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"12\" cy=\"10\" r=\"2.5\" stroke=\"currentColor\" stroke-width=\"1.5\"/></svg><p>Rua João Pessoa, 1018, Centro<br>Montenegro, RS</p></div></div>",
+      "css": ".ds-map { position: relative; min-height: 320px; border-radius: 20px; overflow: hidden; border: 1px solid var(--line, #E6E0D6); background: var(--teal-50, #ECF8F6); box-shadow: 0 2px 4px rgba(38,35,31,0.05), 0 18px 36px -14px rgba(38,35,31,0.16); font-family: \"Hanken Grotesk\", -apple-system, sans-serif; } .ds-map-fallback { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.6rem; padding: 2rem; text-align: center; color: var(--ink-700, #413B35); } .ds-map-fallback p { margin: 0; } .ds-map-fallback svg { color: var(--teal-700, #115E59); } .ds-map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: saturate(0.75) sepia(0.06); }"
+    },
+    {
+      "name": "Mobile Booking Bar",
+      "kind": "custom",
+      "refersTo": "booking-bar",
+      "description": "≤960px only: fixed glass bar with one full-width WhatsApp button; shown once the hero CTA has scrolled above the viewport, hidden over the contact section. Shown here in its visible state.",
+      "html": "<div class=\"ds-booking\"><a class=\"ds-booking-btn\" href=\"#\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M20 11.5C20 15.9 16.4 19.5 12 19.5C10.6 19.5 9.3 19.1 8.1 18.5L4 19.5L5.1 15.7C4.4 14.5 4 13 4 11.5C4 7.1 7.6 3.5 12 3.5C16.4 3.5 20 7.1 20 11.5Z\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\"/></svg>Agendar pelo WhatsApp</a></div>",
+      "css": ".ds-booking { padding: 0.75rem 1.25rem; background: rgba(250,248,245,0.92); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-top: 1px solid var(--line, #E6E0D6); } .ds-booking-btn { display: flex; width: 100%; box-sizing: border-box; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.5rem; border-radius: 10px; background: var(--teal-600, #0F766E); color: #fff; text-decoration: none; font-family: \"Hanken Grotesk\", -apple-system, sans-serif; font-weight: 600; font-size: 0.95rem; box-shadow: 0 1px 2px rgba(38,35,31,0.06), 0 3px 8px rgba(38,35,31,0.05); }"
     }
   ],
   "narrative": {
     "northStar": "The Quiet Premium Clinic",
-    "overview": "This is a single-accent, warm off-white world built to put professional trust signals — an active CRBM registration, a decade of practice, a natural-result claim — ahead of decorative aesthetic-clinic imagery. It plays the premium med-spa category standard (the Sculpt / Lasch finish class) straight, chosen deliberately by the client: firm grid, sane typography, one discreet accent, and a real portrait plus credentials carrying the confidence. The page ground is never pure white (#FAF8F5); cards and inputs are the only pure-white surfaces; every neutral is warm-tinted charcoal, never pure gray. A single teal/jade family carries buttons, links, icon chips, focus rings, and background washes — nothing else competes for chromatic attention.\n\nSpectral (a calm serif) sets the hero headline, every section title, the procedure names, and exactly one inline emphasis word; Hanken Grotesk carries everything a visitor actually reads or acts on, including feature-card and FAQ headings, which are deliberately sans rather than serif. Corners are moderate (8–20px) and never a pill — a deliberate break from the superseded rose-boutique world. Depth is neutral warm shadows with real offset and blur on a small set of lifted elements; there are no colored halos and no hard offset shadows. Surfaces are flat by default and 1px hairline borders do most of the separating.\n\nThe system explicitly rejects: the previous rose/serif petal-frame world (soft-rose accent, Fraunces, pill buttons, authored SVG petal clip-path); the influencer-aesthetic hero built on glamour photography alone; and the three-giant-numbers stat template — replaced by a check-icon credential list. This world is not to be reintroduced toward the rose direction without a fresh client request.",
+    "overview": "This is a single-accent, warm off-white world built to put professional trust signals — an active CRBM registration, a decade of practice, a natural-result claim — ahead of decorative aesthetic-clinic imagery. It plays the premium med-spa category standard (the Sculpt / Lasch finish class) straight, chosen deliberately by the client: firm grid, sane typography, one discreet accent, and a real portrait plus credentials carrying the confidence. The page ground is never pure white (#FAF8F5); the credential badge is the only pure-white surface; every neutral is warm-tinted charcoal, never pure gray. A single teal/jade family carries buttons, links, the credential check chips, focus rings, and background washes — nothing else competes for chromatic attention.\n\nThe page reads as an editorial column system rather than a stack of centred blocks: section titles sit in a narrow left column and content runs in a wider right column, and repeating content (differentiators, procedures, FAQ, contact details) is set as hairline-ruled rows, not cards. Spectral (a calm serif) sets the hero headline, every section title, the procedure group titles and procedure names; Hanken Grotesk carries everything a visitor actually reads or acts on, including differentiator and FAQ headings, which are deliberately sans rather than serif. Corners are moderate (8–20px) and never a pill — a deliberate break from the superseded rose-boutique world. Depth is neutral warm shadows with real offset and blur on a small set of lifted elements; there are no colored halos and no hard offset shadows.\n\nWhatsApp is the only conversion path. Every primary button on the page opens the same prefilled wa.me conversation — header, mobile menu, hero, contact section, and the mobile booking bar. There is no e-mail form.\n\nThe system explicitly rejects: the previous rose/serif \"petal-frame\" world (soft-rose accent, Fraunces, pill buttons, authored SVG petal clip-path); the \"influencer aesthetic\" hero built on glamour photography alone; and the three-giant-numbers stat template — replaced by a check-icon credential list. This world is not to be reintroduced toward the rose direction without a fresh client request.",
     "keyCharacteristics": [
-      "Warm off-white ground (#FAF8F5), pure white reserved for cards/inputs, ink always warm-tinted charcoal.",
-      "One accent: a teal/jade family on buttons, links, icons, washes, and focus.",
-      "Spectral serif for titles and one emphasis word; Hanken Grotesk for everything else.",
+      "Warm off-white ground (#FAF8F5), pure white reserved for the raised credential badge, ink always warm-tinted charcoal.",
+      "One accent: a teal/jade family on buttons, links, check chips, washes, and focus.",
+      "Spectral serif for titles, group titles and procedure names; Hanken Grotesk for everything else.",
+      "Split editorial layout: title left (0.8fr), content right (1.2fr); repeated items are hairline rows, never cards.",
       "Moderate radii (8–20px), never a pill; neutral warm shadows with real offset, never a halo.",
-      "At most one bordered/shadowed card inside a section; repeated items use hairline dividers.",
-      "One authored motion moment (the hero portrait wipe); everything else is one calm fade-up."
+      "One conversion path (WhatsApp) and one authored motion moment (the hero portrait wipe); everything below the fold is still."
     ],
     "rules": [
       {
         "name": "The One Accent Rule",
-        "body": "Teal/eucalyptus is the only chromatic family in the system. It never gains a second competing hue. --ok and --err are semantic status signals on the contact form only — never decoration, never applied outside form feedback.",
+        "body": "Teal/eucalyptus is the only chromatic family in the system. It never gains a second competing hue. There are no status colors: with the form gone, nothing on the page signals success or error.",
         "section": "colors"
       },
       {
@@ -179,32 +428,32 @@
       },
       {
         "name": "The White-Is-A-Surface Rule",
-        "body": "Pure white (#FFFFFF) is only ever a raised element — a card, an input, the form, the badge. The page and its tinted sections are always warm off-white.",
+        "body": "Pure white (#FFFFFF) is only ever a raised element — today, the credential badge. The page and its tinted sections are always warm off-white.",
         "section": "colors"
       },
       {
-        "name": "The Single Emphasis Word Rule",
-        "body": "Spectral italic in teal-700 (em) marks exactly one word or short phrase inline within a heading — a punctuation device, not a second heading style. It never wraps a full sentence.",
+        "name": "The Plain Headline Rule",
+        "body": "Headlines carry no inline accent: no italic or teal-colored word inside a heading. The hero h1 does its work through size (up to ~4.1rem, line-height 1.05, -0.025em) and a concrete claim, not through a highlighted phrase.",
         "section": "typography"
       },
       {
         "name": "The Sans-Heading Rule",
-        "body": "Repeating sub-heads (feature cards, FAQ questions) are Hanken 600, not Spectral. The serif is reserved for the page's structural titles, procedure names, and the brand wordmark. Do not upgrade a component heading to serif.",
+        "body": "Repeating sub-heads (Diferenciais items, FAQ questions) are Hanken 600, not Spectral. The serif is reserved for the page's structural titles, procedure group titles and names, and the brand wordmark. Do not \"upgrade\" a component heading to serif.",
         "section": "typography"
       },
       {
         "name": "The Standalone-Title Rule",
-        "body": "Every section h2 stands alone. No decorative kicker or eyebrow label sits above a section heading anywhere in this build. Uppercase labels exist only as the logo role line and as inline group titles within the procedures list.",
+        "body": "Every section h2 stands alone. No decorative kicker or eyebrow label sits above a section heading anywhere in this build, and there are no uppercase tracked labels at all — the brand role line and group titles are sentence case.",
         "section": "typography"
       },
       {
         "name": "The Flat-By-Default Rule",
-        "body": "Surfaces are flat at rest. A shadow appears as elevation (portrait, form card, badge) or as a response to state (button hover, header scrolled) — never as ambient decoration on every card.",
+        "body": "Surfaces are flat at rest. A shadow appears as elevation (portrait, map card, badge) or as a response to state (button hover, header scrolled) — never as ambient decoration.",
         "section": "elevation"
       },
       {
         "name": "The No Card-in-Card Rule",
-        "body": "A bordered or shadowed container never nests another. The feature list, procedure lists, and FAQ use flat hairline dividers instead of card chrome. At most one such card per section.",
+        "body": "A bordered or shadowed container never nests another. The Diferenciais list, procedure groups, FAQ, and contact details are flat hairline rows. At most one card per section — in Contato that card is the map.",
         "section": "elevation"
       },
       {
@@ -219,25 +468,30 @@
       }
     ],
     "dos": [
-      "Do keep the page and tinted sections on warm off-white (--paper / --paper-deep) and reserve pure white for raised elements (cards, inputs, form, badge).",
-      "Do carry all accent work with the one teal/jade family — fill (teal-600), hover/label/icon (teal-700), washes (teal-100), hover fills (teal-50).",
+      "Do keep the page and tinted sections on warm off-white (--paper / --paper-deep) and reserve pure white for raised elements (the credential badge).",
+      "Do carry all accent work with the one teal/jade family — fill (teal-600), hover/label/icon/link (teal-700), washes (teal-100), hover fills and map ground (teal-50).",
+      "Do route every booking action to the same prefilled WhatsApp conversation; WhatsApp is the only conversion path.",
+      "Do lay new content sections out on the split (title 0.8fr left, content 1.2fr right) and make the title sticky when the right column is a long list.",
+      "Do separate repeating items (differentiators, procedures, FAQ, contact details) with 1px hairline rows, not card chrome — at most one bordered/shadowed card per section.",
       "Do use 10px button radius and 8–20px elsewhere; scale the radius up with the surface.",
-      "Do separate repeating items (features, procedures, FAQ) with 1px hairline dividers, not card chrome — at most one bordered/shadowed card per section.",
       "Do tint every shadow with rgba(38,35,31,...) and keep real offset + blur (--shadow-sm/md/lg).",
-      "Do treat CRBM registration, +10 anos, and the natural-result claim as first-viewport content in a check-icon list.",
-      "Do render unconfirmed content (procedures, testimonials, contact details) as clearly-signalled placeholders; let the testimonials section stand as an honest dashed-border empty state rather than fabricate quotes.",
-      "Do keep every [data-reveal] state visible-by-default in CSS; JS only arms the pending state via IntersectionObserver, with a 2500ms safety net and a try/catch force-reveal.",
-      "Do confine authored motion to the hero portrait wipe (clip-path: inset(0 0 100% 0) -> inset(0 0 0 0), 0.9s --ease-out), with the teal wash sliding in from lower-left and the badge settling at +0.5s. Everything below the fold uses one calm fade-up (opacity + 22px translateY, 0.7s). prefers-reduced-motion neutralizes all of it."
+      "Do treat CRBM registration, \"+10 anos,\" the natural-result claim and the location as first-viewport content.",
+      "Do label unconfirmed content plainly — the procedures list carries a visible note that it is an example pending confirmation — rather than presenting it as final.",
+      "Do confine authored motion to the hero portrait wipe (clip-path: inset(0 0 100% 0) → inset(0 0 0 0), 0.9s --ease-out), with the teal wash sliding in from lower-left and the badge settling at +0.5s. Keep its state visible-by-default in CSS; JS arms the pending state via IntersectionObserver, with a 2500ms safety net and a try/catch force-reveal. prefers-reduced-motion neutralizes all of it.",
+      "Do hide collapsed disclosure content with visibility: hidden and wire aria-controls / aria-expanded, as the FAQ does."
     ],
     "donts": [
       "Don't use a pill or near-pill radius (≈999px) on anything. Buttons are 10px. This is a permanent break from the superseded rose-boutique world.",
       "Don't reintroduce that world's language: soft-rose accent, Fraunces, or an authored organic petal / clip-path silhouette. No client request, no reintroduction.",
       "Don't introduce a second accent hue, a pure-gray neutral, or a colored/halo/hard-offset shadow.",
       "Don't stack a bordered or shadowed container inside another (the No Card-in-Card rule).",
-      "Don't set a feature-card or FAQ heading in Spectral — repeating sub-heads are Hanken 600. Reserve the serif for section titles, procedure names, and the wordmark.",
+      "Don't add icon chips to lists below the hero; Diferenciais, procedures and contact details are text rows.",
+      "Don't add a second conversion path (a contact form, an e-mail CTA) beside WhatsApp without a client request.",
+      "Don't set a Diferenciais or FAQ heading in Spectral — repeating sub-heads are Hanken 600. Reserve the serif for section titles, procedure group titles and names, and the wordmark.",
       "Don't add a kicker or eyebrow label above a section heading; every h2 stands alone.",
       "Don't rebuild the hero credential row as a three-giant-numbers stat bar — it is a check-icon proof list.",
-      "Don't spend a second authored motion moment anywhere else; below-the-fold content gets the one shared fade-up only."
+      "Don't spend a second authored motion moment anywhere else, and don't add scroll fade-ups to sections.",
+      "Don't use all-caps tracked labels, middle-dot meta strings (A · B), or a → glyph appended to button text."
     ]
   }
 }
