@@ -1,8 +1,6 @@
 (() => {
   "use strict";
 
-  const API_BASE_URL = "http://localhost:3000";
-
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -106,103 +104,34 @@
     });
   });
 
-  /* ---------- Contact form ---------- */
-  const form = document.getElementById("contactForm");
-  const statusEl = document.getElementById("formStatus");
+  /* ---------- Mobile booking bar ----------
+     Shows once the hero's own WhatsApp button has scrolled up out of
+     view, and
+     steps aside again while the contact section (which has its own
+     button) or the footer is on screen. Hidden on desktop by CSS. */
+  const bookingBar = document.getElementById("bookingBar");
+  const heroActions = document.querySelector(".hero__actions");
+  const contactSection = document.getElementById("contato");
 
-  const validators = {
-    name: (v) => v.trim().length >= 2 || "Informe seu nome completo.",
-    email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || "Informe um e-mail válido.",
-    phone: (v) => v.replace(/\D/g, "").length >= 10 || "Informe um telefone com DDD.",
-    procedure: (v) => v.trim().length > 0 || "Selecione um procedimento.",
-    message: (v) => v.trim().length >= 10 || "Conte um pouco mais (mínimo 10 caracteres).",
-  };
-
-  const setFieldError = (field, message) => {
-    const row = field.closest(".form-row");
-    const errorEl = form.querySelector(`[data-error-for="${field.name}"]`);
-    if (message) {
-      row.classList.add("has-error");
-      if (errorEl) errorEl.textContent = message;
-    } else {
-      row.classList.remove("has-error");
-      if (errorEl) errorEl.textContent = "";
+  if (bookingBar && heroActions && "IntersectionObserver" in window) {
+    const barLink = bookingBar.querySelector("a");
+    const state = { heroPassed: false, contactVisible: false };
+    const update = () => {
+      const show = state.heroPassed && !state.contactVisible;
+      bookingBar.classList.toggle("is-shown", show);
+      bookingBar.setAttribute("aria-hidden", String(!show));
+      if (barLink) barLink.tabIndex = show ? 0 : -1;
+    };
+    new IntersectionObserver(([entry]) => {
+      // "Passed" = scrolled above the viewport, not merely below the fold
+      state.heroPassed = !entry.isIntersecting && entry.boundingClientRect.top < 0;
+      update();
+    }).observe(heroActions);
+    if (contactSection) {
+      new IntersectionObserver(([entry]) => {
+        state.contactVisible = entry.isIntersecting;
+        update();
+      }, { rootMargin: "0px 0px -35% 0px" }).observe(contactSection);
     }
-  };
-
-  const validateForm = () => {
-    let isValid = true;
-    Object.keys(validators).forEach((name) => {
-      const field = form.elements[name];
-      if (!field) return;
-      const result = validators[name](field.value);
-      if (result !== true) {
-        setFieldError(field, result);
-        isValid = false;
-      } else {
-        setFieldError(field, "");
-      }
-    });
-    return isValid;
-  };
-
-  if (form) {
-    Object.keys(validators).forEach((name) => {
-      const field = form.elements[name];
-      if (!field) return;
-      field.addEventListener("blur", () => {
-        const result = validators[name](field.value);
-        setFieldError(field, result === true ? "" : result);
-      });
-    });
-
-    form.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      statusEl.textContent = "";
-      statusEl.className = "form-status";
-
-      if (!validateForm()) {
-        statusEl.textContent = "Revise os campos destacados antes de enviar.";
-        statusEl.classList.add("is-error");
-        return;
-      }
-
-      const submitBtn = form.querySelector('button[type="submit"]');
-      const originalLabel = submitBtn.querySelector(".btn__label").textContent;
-      submitBtn.disabled = true;
-      submitBtn.querySelector(".btn__label").textContent = "Enviando...";
-
-      const payload = {
-        name: form.elements.name.value.trim(),
-        email: form.elements.email.value.trim(),
-        phone: form.elements.phone.value.trim(),
-        procedure: form.elements.procedure.value,
-        message: form.elements.message.value.trim(),
-      };
-
-      try {
-        const response = await fetch(`${API_BASE_URL}/api/contact`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        });
-
-        const data = await response.json().catch(() => ({}));
-
-        if (!response.ok) {
-          throw new Error(data.message || "Não foi possível enviar sua mensagem agora.");
-        }
-
-        statusEl.textContent = data.message || "Mensagem enviada com sucesso! Retornaremos em breve.";
-        statusEl.classList.add("is-success");
-        form.reset();
-      } catch (err) {
-        statusEl.textContent = `${err.message} Você também pode falar direto pelo WhatsApp.`;
-        statusEl.classList.add("is-error");
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.querySelector(".btn__label").textContent = originalLabel;
-      }
-    });
   }
 })();
