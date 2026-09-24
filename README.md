@@ -1,38 +1,20 @@
 # Site — Dra. Luana Amaral
 
-Projeto reorganizado em **front-end** (site) e **back-end** (API do formulário de contato).
+Site estático de apresentação da Luana Amaral, Biomédica Esteta (CRBM 10922-5), em Montenegro, RS. Todo o agendamento é feito pelo WhatsApp.
 
 ```
-.
-├── frontend/          → site estático (o que o visitante vê)
-│   ├── index.html
-│   ├── css/style.css
-│   ├── js/main.js
-│   └── assets/foto-luana.png
-│
-└── backend/           → API Node/Express que envia o e-mail do formulário
-    ├── server.js
-    ├── package.json
-    ├── .env.example
-    └── src/
-        ├── routes/contact.routes.js
-        ├── controllers/contact.controller.js
-        ├── services/mailer.service.js
-        └── middleware/validateContact.js
+frontend/            → site estático (o que o visitante vê)
+├── index.html
+├── css/style.css
+├── js/main.js
+└── assets/          → foto da profissional e fontes (Spectral + Hanken Grotesk)
 ```
 
-## O que mudou no visual
+O visual (cores, fontes, espaçamentos e regras) está documentado em `DESIGN.md`. O contexto do produto e o que é conteúdo confirmado estão em `PRODUCT.md`.
 
-- Paleta trocada para **branco + rosa suave** (antes era dourado/bege).
-- Tipografia nova: **Fraunces** (títulos, com um toque editorial) + **Manrope** (textos).
-- Fotos agora usam uma **moldura orgânica** ("pétala"), o elemento de assinatura visual do site.
-- Header com efeito de vidro (glass) que ganha sombra ao rolar a página.
-- Menu mobile, FAQ e animações de entrada (scroll reveal) reescritos em CSS/JS puro (sem depender de framework externo pesado).
-- Removido o Tailwind via CDN — agora é um único arquivo `style.css` com variáveis (`:root`), mais leve e fácil de ajustar (cores, espaçamentos e fontes ficam centralizados no topo do arquivo).
+## Como visualizar
 
-## Front-end: como visualizar
-
-Não precisa de instalação. Basta abrir `frontend/index.html` no navegador, ou usar um servidor local simples:
+Não precisa de instalação. Abra `frontend/index.html` no navegador ou use um servidor local simples:
 
 ```bash
 cd frontend
@@ -40,57 +22,20 @@ npx serve .
 # ou: python3 -m http.server 5500
 ```
 
-## Back-end: como rodar a API de e-mail
+## Contato e mapa
 
-O formulário de contato hoje só abria o WhatsApp. Agora ele **também envia um e-mail de verdade** para o consultório, através de uma API própria.
+- WhatsApp: (51) 9849-3543. Todos os botões de agendamento usam `https://wa.me/555198493543` com uma mensagem inicial pronta.
+- Endereço: Rua João Pessoa, 1018, Centro, Montenegro, RS, 95780-000.
+- O mapa da seção "Agende sua avaliação" é um embed público do Google Maps (não precisa de chave de API). Se o mapa não carregar, o quadro mostra o endereço e um link para abrir no Google Maps.
 
-1. Instale as dependências:
-   ```bash
-   cd backend
-   npm install
-   ```
-
-2. Copie o arquivo de variáveis de ambiente e preencha com seus dados de e-mail:
-   ```bash
-   cp .env.example .env
-   ```
-   No `.env`, configure `SMTP_USER`, `SMTP_PASS` (senha de app, não a senha normal) e `CONTACT_TO_EMAIL`.
-   Funciona com Gmail, Outlook, ou qualquer provedor SMTP (Zoho, SendGrid, etc.).
-
-3. Rode o servidor:
-   ```bash
-   npm start
-   ```
-   A API sobe em `http://localhost:3000`.
-
-4. No `frontend/js/main.js`, a constante `API_BASE_URL` já aponta para `http://localhost:3000` em desenvolvimento. Quando publicar o back-end (Render, Railway, VPS etc.), atualize essa URL para o endereço público da API.
-
-### Endpoint disponível
-
-`POST /api/contact`
-
-```json
-{
-  "name": "Maria",
-  "email": "maria@email.com",
-  "phone": "11999999999",
-  "procedure": "harmonizacao-facial",
-  "message": "Gostaria de agendar uma avaliação."
-}
-```
-
-Retorna `200` com `{ "message": "Mensagem enviada com sucesso." }` em caso de sucesso, ou `400`/`500` com uma mensagem de erro.
+Para trocar o número, procure por `555198493543` e `9849-3543` em `frontend/index.html`.
 
 ## Antes de publicar (pendências de conteúdo)
 
-O conteúdo original tinha vários placeholders que continuam pendentes — vale preencher antes de ir ao ar:
-
-- Número de WhatsApp real (hoje está como `5511XXXXXXXXXX` em vários links).
-- Endereço do consultório (seção "Contato").
-- Universidade/ano de formação (seção "Formação").
-- Fotos reais dos procedimentos (hoje usam imagens de banco de imagens do Unsplash).
+- Lista de procedimentos: hoje é uma lista de exemplo, a confirmar com a profissional.
+- Depoimentos: a seção foi retirada até existirem depoimentos reais autorizados.
+- Horários de atendimento e redes sociais: não aparecem no site até serem informados.
 
 ## Deploy sugerido
 
-- **Front-end:** Netlify, Vercel ou GitHub Pages (é só a pasta `frontend/`).
-- **Back-end:** Render, Railway ou um VPS simples (é a pasta `backend/`, um serviço Node comum).
+Netlify, Vercel ou GitHub Pages, publicando só a pasta `frontend/`.
