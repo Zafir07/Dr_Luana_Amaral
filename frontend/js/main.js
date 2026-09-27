@@ -70,6 +70,34 @@
     document.querySelectorAll(".reveal").forEach((el) => el.classList.add("in"));
   }
 
+  /* ---------- Before/after tabs (WAI-ARIA tabs pattern) ---------- */
+  document.querySelectorAll(".results").forEach((box) => {
+    const tabs = Array.from(box.querySelectorAll('[role="tab"]'));
+    const select = (tab, focus) => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute("aria-selected", String(on));
+        t.tabIndex = on ? 0 : -1;
+        const panel = document.getElementById(t.getAttribute("aria-controls"));
+        if (panel) panel.hidden = !on;
+      });
+      if (focus) tab.focus();
+    };
+    tabs.forEach((tab, i) => {
+      tab.addEventListener("click", () => select(tab, false));
+      tab.addEventListener("keydown", (e) => {
+        const keys = { ArrowRight: 1, ArrowLeft: -1 };
+        if (e.key in keys) {
+          e.preventDefault();
+          select(tabs[(i + keys[e.key] + tabs.length) % tabs.length], true);
+        } else if (e.key === "Home" || e.key === "End") {
+          e.preventDefault();
+          select(e.key === "Home" ? tabs[0] : tabs[tabs.length - 1], true);
+        }
+      });
+    });
+  });
+
   /* ---------- FAQ accordion (one open at a time) ---------- */
   document.querySelectorAll(".faq__item").forEach((item) => {
     const btn = item.querySelector(".faq__btn");
