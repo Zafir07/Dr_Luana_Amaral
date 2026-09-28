@@ -71,6 +71,7 @@
   }
 
   /* ---------- Before/after tabs (WAI-ARIA tabs pattern) ---------- */
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll(".results").forEach((box) => {
     const tabs = Array.from(box.querySelectorAll('[role="tab"]'));
     const select = (tab, focus) => {
@@ -79,7 +80,15 @@
         t.setAttribute("aria-selected", String(on));
         t.tabIndex = on ? 0 : -1;
         const panel = document.getElementById(t.getAttribute("aria-controls"));
-        if (panel) panel.hidden = !on;
+        if (panel) {
+          panel.hidden = !on;
+          // Play a panel's video only while its tab is open (and never
+          // autoplay for people who asked for reduced motion)
+          panel.querySelectorAll("video").forEach((v) => {
+            if (on && !reduceMotion) v.play().catch(() => {});
+            else v.pause();
+          });
+        }
       });
       if (focus) tab.focus();
     };

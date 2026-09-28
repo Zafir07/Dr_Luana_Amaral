@@ -278,22 +278,79 @@
             <p class="results__note">Fotos de pacientes da Luana. Resultados variam de pessoa para pessoa e dependem de avaliação individual.</p>
           </div>
         </article>
-        <article class="service-card service-card--wide service-card--list reveal">
+        <article class="service-card service-card--wide reveal">
           <div class="service-card__body">
           <div class="service-card__top">
             <span class="icon-wrap" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="4.5" r="2"/><path d="M8 21c.6-3.5.4-6-1-9l2.2-4.3h5.6L17 12c-1.4 3-1.6 5.5-1 9" stroke-linejoin="round"/><path d="M10 12.5h4" stroke-linecap="round"/></svg></span>
             <span class="tag">Corporal</span>
           </div>
           <h3>Harmonização corporal</h3>
-          <p class="service-card__desc">Contorno, definição e textura de pele com técnicas minimamente invasivas, conforme a sua avaliação.</p>
-
-          <a href="https://wa.me/555198493543?text=Ol%C3%A1%2C%20Luana%21%20Tenho%20interesse%20em%20harmoniza%C3%A7%C3%A3o%20corporal%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="btn btn--primary btn--block" target="_blank" rel="noopener">Agendar avaliação corporal</a>
-          </div>
-          <ul class="checklist checklist--side">
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Contorno corporal</strong>Definição com técnicas minimamente invasivas</span></li>
-            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Bioestimulador corporal</strong>Firmeza e textura de pele em áreas do corpo</span></li>
+          <p class="service-card__desc">Contorno, definição e firmeza da pele com técnicas minimamente invasivas, conforme a sua avaliação.</p>
+          <ul class="checklist">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Harmonização glútea</strong>Contorno e projeção dos glúteos</span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Bioestimulador de colágeno</strong>Firmeza e textura de pele no abdômen, pescoço e contorno do rosto</span></li>
             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg><span><strong>Enzimas e intradermoterapia</strong>Protocolos combinados conforme avaliação</span></li>
           </ul>
+          <a href="https://wa.me/555198493543?text=Ol%C3%A1%2C%20Luana%21%20Tenho%20interesse%20em%20harmoniza%C3%A7%C3%A3o%20corporal%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="btn btn--primary btn--block" target="_blank" rel="noopener">Agendar avaliação corporal</a>
+          </div>
+          <div class="results">
+            <p class="results__title">Resultados reais</p>
+            <div class="results__tabs" role="tablist" aria-label="Resultados corporais por área">
+              <button class="results__tab" role="tab" id="tab-gluteo" aria-controls="res-gluteo" aria-selected="true" tabindex="0">Glúteos</button>
+              <button class="results__tab" role="tab" id="tab-abdomen" aria-controls="res-abdomen" aria-selected="false" tabindex="-1">Abdômen</button>
+              <button class="results__tab" role="tab" id="tab-pescoco" aria-controls="res-pescoco" aria-selected="false" tabindex="-1">Pescoço</button>
+              <button class="results__tab" role="tab" id="tab-mandibula" aria-controls="res-mandibula" aria-selected="false" tabindex="-1">Mandíbula</button>
+            </div>
+            <figure class="results__panel ba ba--tall" role="tabpanel" id="res-gluteo" aria-labelledby="tab-gluteo">
+              <div class="ba__pair" role="img" aria-label="Harmonização glútea: contorno e projeção dos glúteos, antes e depois.">
+                <div class="ba__img">
+                  <picture><source srcset="assets/resultados/gluteo-antes.webp" type="image/webp"><img src="assets/resultados/gluteo-antes.jpg" alt="" width="450" height="600" loading="lazy"></picture>
+                  <span class="ba__label">Antes</span>
+                </div>
+                <div class="ba__img">
+                  <picture><source srcset="assets/resultados/gluteo-depois.webp" type="image/webp"><img src="assets/resultados/gluteo-depois.jpg" alt="" width="450" height="600" loading="lazy"></picture>
+                  <span class="ba__label">Depois</span>
+                </div>
+              </div>
+              <figcaption><strong>Harmonização glútea:</strong> contorno e projeção dos glúteos, antes e depois.</figcaption>
+            </figure>
+            <figure class="results__panel ba" role="tabpanel" id="res-abdomen" aria-labelledby="tab-abdomen" hidden>
+              <div class="ba__video">
+                <video poster="assets/resultados/abdomen-bioestimulador-poster.jpg" width="480" height="640" muted loop playsinline controls preload="none" aria-label="Vídeo: abdômen antes e logo após a aplicação de bioestimulador de colágeno">
+                  <source src="assets/resultados/abdomen-bioestimulador.webm" type="video/webm">
+                  <source src="assets/resultados/abdomen-bioestimulador.mp4" type="video/mp4">
+                </video>
+              </div>
+              <figcaption><strong>Bioestimulador de colágeno:</strong> abdômen antes e logo após a aplicação. A vermelhidão é passageira, e o ganho de firmeza aparece aos poucos, ao longo das semanas seguintes.</figcaption>
+            </figure>
+            <figure class="results__panel ba ba--tall" role="tabpanel" id="res-pescoco" aria-labelledby="tab-pescoco" hidden>
+              <div class="ba__pair" role="img" aria-label="Bioestimulador de colágeno: flacidez e linhas do pescoço, antes e depois.">
+                <div class="ba__img">
+                  <picture><source srcset="assets/resultados/pescoco-antes.webp" type="image/webp"><img src="assets/resultados/pescoco-antes.jpg" alt="" width="450" height="600" loading="lazy"></picture>
+                  <span class="ba__label">Antes</span>
+                </div>
+                <div class="ba__img">
+                  <picture><source srcset="assets/resultados/pescoco-depois.webp" type="image/webp"><img src="assets/resultados/pescoco-depois.jpg" alt="" width="450" height="600" loading="lazy"></picture>
+                  <span class="ba__label">Depois</span>
+                </div>
+              </div>
+              <figcaption><strong>Bioestimulador de colágeno:</strong> flacidez e linhas do pescoço, antes e depois.</figcaption>
+            </figure>
+            <figure class="results__panel ba" role="tabpanel" id="res-mandibula" aria-labelledby="tab-mandibula" hidden>
+              <div class="ba__pair" role="img" aria-label="Bioestimulador de colágeno: contorno da mandíbula e papada, antes e depois.">
+                <div class="ba__img">
+                  <picture><source srcset="assets/resultados/mandibula-antes.webp" type="image/webp"><img src="assets/resultados/mandibula-antes.jpg" alt="" width="520" height="390" loading="lazy"></picture>
+                  <span class="ba__label">Antes</span>
+                </div>
+                <div class="ba__img">
+                  <picture><source srcset="assets/resultados/mandibula-depois.webp" type="image/webp"><img src="assets/resultados/mandibula-depois.jpg" alt="" width="520" height="390" loading="lazy"></picture>
+                  <span class="ba__label">Depois</span>
+                </div>
+              </div>
+              <figcaption><strong>Bioestimulador de colágeno:</strong> contorno da mandíbula e papada, antes e depois.</figcaption>
+            </figure>
+            <p class="results__note">Fotos e vídeo de pacientes da Luana. Resultados variam de pessoa para pessoa e dependem de avaliação individual.</p>
+          </div>
         </article>
       </div>
     </div>
