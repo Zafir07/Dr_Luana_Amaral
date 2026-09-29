@@ -39,15 +39,16 @@ Visitante chega ao site (mobile, majoritariamente), navega Sobre/Diferenciais/Pr
 - Claims de marketing confirmadas como reais pelo cliente: **+10 anos de experiência**, **100% resultados naturais** (usar como está, sem reforçar com números adicionais não confirmados).
 - Preferência visual permanente da cliente (2026-09): registro de **clínica estética premium "clean" atual** — base off-white quente, um único acento verde, tipografia sã (serif calma nos títulos, grotesca no texto), cantos moderados (nunca pill), fotografia em destaque. Régua de acabamento: sites de clínicas estéticas premium (Sculpt, Lasch e similares). Substitui o mundo rosa-boutique/pétala anterior; não reintroduzir sem novo pedido da cliente.
 - Ajuste de cor (2026-09-09): a cliente achou o verde-sálvia acinzentado "morto" e pediu um acento **mais vivo**. O acento passou a ser uma família **verde-teal/jade viva** (`--teal-*`: fill `#0F766E`, hover/ícones/label `#115E59`, washes `#D2F0EC`, toque de jade `#14B8A6`) — mesma lógica de acento único, contraste AA mantido em todos os fundos. Off-white quente, tipografia, formas e sombras inalterados. Não voltar ao sálvia discreto sem novo pedido.
+- Mudança de estrutura visual (2026-09-24, pedido explícito do usuário): o site passa a seguir a **estrutura e o estilo do site da Nádia Fadel** (repositório `Zafir07/Psicologa_Nadia_Fadel`, do mesmo autor): menu transparente que vira vidro ao rolar, formas orgânicas no fundo, foto com máscara orgânica e cartões flutuantes, botões em pílula, eyebrows em caixa alta, números grandes no hero, grades de cartões, faixas verde-escuras, CTA final e botão flutuante do WhatsApp. **As cores continuam as da Luana** (off-white quente + família verde-teal/jade) e as fontes continuam Spectral + Hanken Grotesk. Isso substitui as regras anteriores de "sem pílula / sem eyebrow / sem números grandes / sem forma orgânica".
 
 ## Evidence on Hand
 
-Reais e confirmados (usar como fato): nome, título profissional, número CRBM, "+10 anos de experiência", "100% resultados naturais", WhatsApp **(51) 9849-3543** (`wa.me/555198493543`, formato de 8 dígitos confirmado pela cliente), endereço **Rua João Pessoa, 1018, Centro, Montenegro, RS, 95780-000**.
+Reais e confirmados (usar como fato): nome, título profissional, número CRBM, "+10 anos de experiência", "100% resultados naturais", WhatsApp **(51) 9849-3543** (`wa.me/555198493543`, formato de 8 dígitos confirmado pela cliente), endereço **Rua João Pessoa, 1018, Centro, Montenegro, RS, 95780-000**. Instagram **@dra.luanaamarall** (`https://www.instagram.com/dra.luanaamarall/`).
 
 Ainda **não** confirmados — usar placeholder claramente sinalizado, nunca inventar como se fosse real:
 - Lista de procedimentos oferecidos (usar lista placeholder típica de harmonização facial/corporal: preenchimento labial, toxina botulínica, bioestimulador de colágeno, contorno facial, harmonização corporal — a revisar pelo cliente).
 - Depoimentos de pacientes (não inventar; a seção está omitida até haver depoimentos reais autorizados).
-- Horários de atendimento, redes sociais, universidade/ano de formação: não exibir até a cliente informar.
+- Horários de atendimento, outras redes sociais, universidade/ano de formação: não exibir até a cliente informar.
 - Fotos reais da profissional e dos procedimentos — usar placeholder visual (não fabricar uma foto de pessoa real).
 
 ## Product Principles

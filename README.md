@@ -22,6 +22,16 @@ npx serve .
 # ou: python3 -m http.server 5500
 ```
 
+## Blog
+
+Os artigos ficam em `frontend/blog/<slug>/index.html` e são gerados por `tools/build_blog.py`, que copia o cabeçalho e o rodapé da página inicial. Para publicar um artigo novo, adicione um item na lista `ARTICLES` do script e rode:
+
+```bash
+python3 tools/build_blog.py
+```
+
+O script também atualiza a seção "Blog" da página inicial e o `sitemap.xml`. Os textos atuais são educativos e devem ser revisados pela Luana.
+
 ## Contato e mapa
 
 - WhatsApp: (51) 9849-3543. Todos os botões de agendamento usam `https://wa.me/555198493543` com uma mensagem inicial pronta.
