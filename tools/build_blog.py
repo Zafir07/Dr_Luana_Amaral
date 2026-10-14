@@ -12,7 +12,7 @@ ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "frontend"
 SITE = "https://drluanaamaral.com.br"
 DATE = "2026-09-27"
 DATE_BR = "27 de setembro de 2026"
-WA = "https://wa.me/555198493543?text="
+WA = "https://wa.me/555192271025?text="
 
 home = open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()
 
